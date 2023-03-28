@@ -13,6 +13,7 @@ function Navegacion () {
         <Stack.Navigator screenOptions={{headerShown: false }} >
             {/*<Stack.Screen name="splash" component={Splash}/>*/}
              {/*LINEA DE CODIGO AGREGADA DESDE RAMA MARIANA*/}
+{/*LINEA DE CODIGO AGREGADA DESDE GITHUB WEB*/}
             <Stack.Screen name="login" component={Login}/>
             <Stack.Screen name="maintenance" component={MaintenanceRequest}/>
             <Stack.Screen name="profile" component={Profile}/>
