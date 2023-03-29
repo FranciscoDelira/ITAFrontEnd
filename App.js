@@ -13,6 +13,7 @@ function App() {
         3: '#1B396A',
         4: '#807E82',
         5: '#8A8D8F',
+        6: '#CDCDCD',
       },
     },
     config: {
@@ -29,5 +30,3 @@ function App() {
   );
 }
 export default App;
-
-
