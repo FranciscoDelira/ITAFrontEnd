@@ -31,7 +31,7 @@ function Profile ({navigation}) {
                     <Image size="10" source={require('../assets/C1B.png')} alt="maintenance" />
                 </TouchableOpacity>
                 
-                <TouchableOpacity onPress={() => navigation.navigate("password")}>
+                <TouchableOpacity onPress={() => navigation.navigate("settings")}>
                     <Image size="10" source={require('../assets/P1B.png')} alt="password" />
                 </TouchableOpacity>
                 

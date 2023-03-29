@@ -57,7 +57,7 @@ function MaintenanceRequest({ navigation }) {
                     </AlertDialog>
                 </TouchableOpacity>
 
-                <TouchableOpacity onPress={() => navigation.navigate("password")}>
+                <TouchableOpacity onPress={() => navigation.navigate("settings")}>
                     <Image size="10" source={require('../assets/P1B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="password" />
                 </TouchableOpacity>
 
