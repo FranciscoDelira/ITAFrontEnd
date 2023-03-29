@@ -11,8 +11,6 @@ const Stack = createNativeStackNavigator();
 function Navegacion () {
     return(
         <Stack.Navigator screenOptions={{headerShown: false }} >
-            {/*<Stack.Screen name="splash" component={Splash}/>*/}
- 
             <Stack.Screen name="login" component={Login}/>
             <Stack.Screen name="maintenance" component={MaintenanceRequest}/>
             <Stack.Screen name="profile" component={Profile}/>
