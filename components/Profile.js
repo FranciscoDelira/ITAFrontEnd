@@ -8,21 +8,21 @@ function Profile ({navigation}) {
     const CloseE =() => setIsOpen1(false);
 
     return (
-        <VStack height="100%" width="100%" space={4} bg="tema.3">
+        <VStack height="100%" width="100%" space={4} _dark={{bg:"tema.3"}} _light={{bg:"tema.2"}}>
            
-            <Heading height="20%" alignSelf="center" color="tema.2" fontSize="4xl" marginTop="10%" paddingTop="10%">Perfil de Usuario</Heading>
+            <Heading height="20%" alignSelf="center" _dark={{color:"tema.2"}} _light={{color:"tema.3"}} fontSize="4xl" marginTop="10%" paddingTop="10%">Perfil de Usuario</Heading>
            
             <Avatar height="20%" width="40%" alignSelf="center" source={{
                 uri: "https://www.w3schools.com/css/img_lights.jpg" }}>
             </Avatar>
 
             <Box height="40%" alignSelf="center" p="2">
-                <Text fontSize="3xl" >Nombre: </Text>
-                <Text p="2">Francisco de Jesus De lira Martinez</Text>
-                <Text fontSize="3xl" >Correo: </Text>
-                <Text p="2">19151704@aguascalientes.tecnm.mx</Text>
-                <Text fontSize="3xl" >Area: </Text>
-                <Text p="2">Departamento de TIC's</Text>
+                <Text _dark={{color:"tema.2"}} _light={{color:"tema.3"}} fontSize="3xl" >Nombre: </Text>
+                <Text _dark={{color:"tema.2"}} _light={{color:"tema.3"}} p="2">Francisco de Jesus De lira Martinez</Text>
+                <Text _dark={{color:"tema.2"}} _light={{color:"tema.3"}} fontSize="3xl" >Correo: </Text>
+                <Text _dark={{color:"tema.2"}} _light={{color:"tema.3"}} p="2">19151704@aguascalientes.tecnm.mx</Text>
+                <Text _dark={{color:"tema.2"}} _light={{color:"tema.3"}} fontSize="3xl" >Area: </Text>
+                <Text _dark={{color:"tema.2"}} _light={{color:"tema.3"}} p="2">Departamento de TIC's</Text>
             </Box>
 
             <HStack height="10%" alignItems="center" alignSelf="center" space="1/6">

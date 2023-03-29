@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Text, VStack, Heading, Image, HStack, Avatar, Button, Input,AlertDialog } from "native-base";
+import { Box, Text, VStack, Heading, Image, HStack, Avatar, Button, Input,AlertDialog} from "native-base";
 import { TouchableOpacity } from "react-native";
 
 function Password ({navigation}) {
@@ -7,23 +7,28 @@ function Password ({navigation}) {
     const [Exit, setIsOpen1] = React.useState(false);
     const CloseE =() => setIsOpen1(false);
 
+   {/* const {
+        colorMode,
+        toggleColorMode
+      } = useColorMode(); */}
+    
     return (
-        <VStack height="100%" width="100%" space={4} bg="tema.3">
+        <VStack height="100%" width="100%" space={4} _dark={{bg:"tema.3"}} _light={{bg:"tema.2"}}>
             
-            <Heading height="20%" alignSelf="center" color="tema.2" fontSize="4xl" marginTop="10%" paddingTop="10%">Cambio de contraseña</Heading>
+            <Heading height="20%" alignSelf="center" _dark={{bg:"tema.2"}} _light={{bg:"tema.3"}} fontSize="4xl" marginTop="10%" paddingTop="10%">Cambio de contraseña</Heading>
             
             <Avatar height="15%" width="30%" alignSelf="center" source={{
                 uri: "https://www.w3schools.com/css/img_lights.jpg" }}>
             </Avatar>
            
            <Box height="45%" alignSelf="center" p="2">
-                <Text fontSize="3xl" >Contraseña actual: </Text>
-                <Text p="2">*******************</Text>
-                <Text fontSize="3xl" >Nueva contraseña: </Text>
-                <Input placeholder="Escriba su nueva contraseña" p="2"/>
-                <Text fontSize="3xl" >Confirmar contraseña: </Text>
-                <Input placeholder="Confirme su nueva contraseña" p="2" />
-                <Button marginTop="10%" width="25%" alignSelf="center" bg="tema.2" _text={{ color: "tema.3"}}>
+                <Text _dark={{color:"tema.2"}} _light={{color:"tema.3"}} fontSize="3xl" >Contraseña actual: </Text>
+                <Text _dark={{color:"tema.2"}} _light={{color:"tema.3"}} p="2">*******************</Text>
+                <Text _dark={{color:"tema.2"}} _light={{color:"tema.3"}} fontSize="3xl" >Nueva contraseña: </Text>
+                <Input color={"tema.3"} size={"md"} _focus={{ backgroundColor: "tema.2" }}  placeholder="Escriba su nueva contraseña" p="2"/>
+                <Text _dark={{color:"tema.2"}} _light={{color:"tema.3"}} fontSize="3xl" >Confirmar contraseña: </Text>
+                <Input color={"tema.3"} size={"md"} _focus={{ backgroundColor: "tema.2" }} placeholder="Confirme su nueva contraseña" p="2" />
+                <Button _dark={{bg:"tema.2", color:"tema.3"}} _light={{bg:"tema.3", color:"tema.2"}} marginTop="10%" width="25%" alignSelf="center">
                 Guardar
                 </Button>
             </Box>
@@ -65,6 +70,8 @@ function Password ({navigation}) {
 
             </HStack>
             
+           {/* <Button onPress={()=>{toggleColorMode();newTheme(colorMode)}}>Toggle</Button> */}
+
         </VStack>
     )
 }
