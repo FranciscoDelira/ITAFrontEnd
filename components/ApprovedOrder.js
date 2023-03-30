@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Button, VStack, Heading, Image, HStack, AlertDialog, Text } from "native-base";
 import { TouchableOpacity } from "react-native";
 
-function MaintenanceRequest({ navigation }) {
+function ApprovedOrder({ navigation }) {
 
     const [Info, setIsOpen] = React.useState(false);
     const CloseI = () => setIsOpen(false);
@@ -89,4 +89,4 @@ function MaintenanceRequest({ navigation }) {
     )
 }
 
-export default MaintenanceRequest;
+export default ApprovedOrder;
