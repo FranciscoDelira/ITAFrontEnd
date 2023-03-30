@@ -22,7 +22,6 @@ function Navegacion () {
             <Stack.Screen name="releasedO" component={ReleasedOrder}/>
             <Stack.Screen name="approvedO" component={ApprovedOrder}/>
             <Stack.Screen name="pendingO" component={PendingOrder}/>
-
         </Stack.Navigator>
     )
 }
