@@ -15,21 +15,22 @@ function PendingOrder({ navigation }) {
 
             <Image alignSelf="center" width="100%" height="10%" marginTop="10%" source={require('../assets/TNM3A.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="TECNM" />
 
-            <Heading height="15%" alignSelf="center" _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="4xl" paddingTop="5%">Solicitudes de mantenimiento</Heading>
+            <Heading height="15%" textAlign={"center"} alignSelf="center" _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="4xl" paddingTop="5%">Ordenes de trabajo pendientes</Heading>
 
             <Box height="55%" w="90%" alignSelf="center" >
 
-                <Button _dark={{ bg: "tema.2", color: "tema.3" }} _light={{ bg: "tema.3", color: "tema.2" }} _pressed={{bg:'tema.6'}} borderRadius="xl" h="32">
-                    <Text fontSize="3xl" _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }}>Nueva solicitud</Text>
-                </Button>
-
-                <Button _dark={{ bg: "tema.2", color: "tema.3" }} _light={{ bg: "tema.3", color: "tema.2" }} _pressed={{bg:'tema.6'}} borderRadius="xl" h="32" marginTop="5%" _text={{ fontSize: "3xl" }}>
-                    <Text fontSize="3xl" _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }}>Solicitudes activas</Text>
-                </Button>
-
-                <Button _dark={{ bg: "tema.2", color: "tema.3" }} _light={{ bg: "tema.3", color: "tema.2" }} _pressed={{bg:'tema.6'}} borderRadius="xl" h="32" marginTop="5%" _text={{ fontSize: "3xl" }}>
-                    <Text fontSize="3xl" _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }}>Historial de solicitudes</Text>
-                </Button>
+                <Box _dark={{ bg: "tema.2", color: "tema.3" }} _light={{ bg: "tema.3", color: "tema.2" }} _pressed={{bg:'tema.6'}} borderRadius="xl" height={"32%"} marginBottom="5%" padding={"3%"}>
+                    <Text  fontSize="xs" _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }}>Folio: </Text>
+                    <Text  fontSize="xs" _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }}>Area solicitante: </Text>
+                    <Text  fontSize="xs" _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }}>Fecha de solicitud: </Text>
+                    <HStack marginTop={"5%"}>
+                        <Text  fontSize="sm" _dark={{ color: "tema.7" }} _light={{ color: "tema.2" }}>PENDIENTE</Text>
+                        <Button borderRadius="10" _pressed={{ bg: 'tema.6' }} _dark={{ bg: "tema.3" }} _light={{ bg: "tema.2" }} onPress={() => navigation.navigate("")}>
+                            <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }}></Text>
+                        </Button>
+                    </HStack>
+                    
+               </Box>
 
             </Box>
 

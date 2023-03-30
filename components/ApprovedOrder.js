@@ -15,7 +15,7 @@ function ApprovedOrder({ navigation }) {
 
             <Image alignSelf="center" width="100%" height="10%" marginTop="10%" source={require('../assets/TNM3A.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="TECNM" />
 
-            <Heading height="15%" alignSelf="center" _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="4xl" paddingTop="5%">Solicitudes de mantenimiento</Heading>
+            <Heading height="15%" alignContent={"center"} _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="4xl" paddingTop="5%">Solicitudes de mantenimiento</Heading>
 
             <Box height="55%" w="90%" alignSelf="center" >
 
@@ -23,11 +23,11 @@ function ApprovedOrder({ navigation }) {
                     <Text fontSize="3xl" _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }}>Nueva solicitud</Text>
                 </Button>
 
-                <Button _dark={{ bg: "tema.2", color: "tema.3" }} _light={{ bg: "tema.3", color: "tema.2" }} _pressed={{bg:'tema.6'}} borderRadius="xl" h="32" marginTop="5%" _text={{ fontSize: "3xl" }}>
+                <Button _dark={{ bg: "tema.2", color: "tema.3" }} _light={{ bg: "tema.3", color: "tema.2" }} _pressed={{bg:'tema.6'}} borderRadius="xl" h="32" marginTop="5%">
                     <Text fontSize="3xl" _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }}>Solicitudes activas</Text>
                 </Button>
 
-                <Button _dark={{ bg: "tema.2", color: "tema.3" }} _light={{ bg: "tema.3", color: "tema.2" }} _pressed={{bg:'tema.6'}} borderRadius="xl" h="32" marginTop="5%" _text={{ fontSize: "3xl" }}>
+                <Button _dark={{ bg: "tema.2", color: "tema.3" }} _light={{ bg: "tema.3", color: "tema.2" }} _pressed={{bg:'tema.6'}} borderRadius="xl" h="32" marginTop="5%">
                     <Text fontSize="3xl" _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }}>Historial de solicitudes</Text>
                 </Button>
 
