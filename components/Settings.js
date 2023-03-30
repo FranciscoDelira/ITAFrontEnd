@@ -7,12 +7,12 @@ function Settings({ navigation }) {
     const [Exit, setIsOpen1] = React.useState(false);
     const CloseE = () => setIsOpen1(false);
 
-    {/* const {colorMode, toggleColorMode} = useColorMode(); */ }
+    {/* const {colorMode, toggleColorMode} = useColorMode(); */}
 
     return (
         <VStack height="100%" width="100%" space={4} _dark={{ bg: "tema.3" }} _light={{ bg: "tema.2" }}>
 
-            <Heading height="20%" alignSelf="center" _dark={{ bg: "tema.2" }} _light={{ bg: "tema.3" }} fontSize="4xl" marginTop="10%" paddingTop="10%">Cambio de contraseña</Heading>
+            <Heading height="20%" alignSelf="center" _dark={{ bg: "tema.2" }} _light={{ bg: "tema.3" }} fontSize="4xl" marginTop="10%" paddingTop="10%">Configuracion</Heading>
 
             <Avatar height="15%" width="30%" alignSelf="center" source={{
                 uri: "https://www.w3schools.com/css/img_lights.jpg"
@@ -69,7 +69,13 @@ function Settings({ navigation }) {
 
             </HStack>
 
-            {/* <Button onPress={()=>{toggleColorMode();newTheme(colorMode)}}>Toggle</Button> */}
+ {/* <Button onPress={()=>{toggleColorMode();newTheme(colorMode)}}>Toggle</Button> 
+           
+            los formatos
+            codigo de calidad
+            modo de la aplicacion
+            -
+           */}
 
         </VStack>
     )

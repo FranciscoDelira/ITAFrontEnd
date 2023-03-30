@@ -4,6 +4,7 @@ import MaintenanceRequest from "./MaintenanceRequest";
 import Profile from "./Profile";
 import Settings from "./Settings";
 import Login from "./Login";
+import Password from "./Password";
 
 const Stack = createNativeStackNavigator();
 
@@ -14,6 +15,7 @@ function Navegacion () {
             <Stack.Screen name="maintenance" component={MaintenanceRequest}/>
             <Stack.Screen name="profile" component={Profile}/>
             <Stack.Screen name="settings" component={Settings}/>
+            <Stack.Screen name="password" component={Password}/>
         </Stack.Navigator>
     )
 }
