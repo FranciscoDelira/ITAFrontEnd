@@ -14,10 +14,12 @@ function App() {
         4: '#807E82',
         5: '#8A8D8F',
         6: '#CDCDCD',
+        7: '#FF0000',
+        8: '#D00000',
       },
     },
     config: {
-      initialColorMode: 'dark',
+      initialColorMode: 'light',
     },
   });
   

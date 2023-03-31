@@ -19,15 +19,18 @@ function MaintenanceRequest({ navigation }) {
 
             <Box height="55%" w="90%" alignSelf="center" >
 
-                <Button _dark={{ bg: "tema.2", color: "tema.3" }} _light={{ bg: "tema.3", color: "tema.2" }} _pressed={{bg:'tema.6'}} borderRadius="xl" h="32">
+                <Button _dark={{ bg: "tema.2", color: "tema.3" }} _light={{ bg: "tema.3", color: "tema.2" }} _pressed={{bg:'tema.6'}} borderRadius="xl" h="32" 
+                onPress={() => navigation.navigate("    ")}>
                     <Text fontSize="3xl" _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }}>Nueva solicitud</Text>
                 </Button>
 
-                <Button _dark={{ bg: "tema.2", color: "tema.3" }} _light={{ bg: "tema.3", color: "tema.2" }} _pressed={{bg:'tema.6'}} borderRadius="xl" h="32" marginTop="5%">
+                <Button _dark={{ bg: "tema.2", color: "tema.3" }} _light={{ bg: "tema.3", color: "tema.2" }} _pressed={{bg:'tema.6'}} borderRadius="xl" h="32" marginTop="5%"
+                onPress={() => navigation.navigate("")}>
                     <Text fontSize="3xl" _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }}>Solicitudes activas</Text>
                 </Button>
 
-                <Button _dark={{ bg: "tema.2", color: "tema.3" }} _light={{ bg: "tema.3", color: "tema.2" }} _pressed={{bg:'tema.6'}} borderRadius="xl" h="32" marginTop="5%">
+                <Button _dark={{ bg: "tema.2", color: "tema.3" }} _light={{ bg: "tema.3", color: "tema.2" }} _pressed={{bg:'tema.6'}} borderRadius="xl" h="32" marginTop="5%"
+                onPress={() => navigation.navigate("")}>
                     <Text fontSize="3xl" _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }}>Historial de solicitudes</Text>
                 </Button>
 
@@ -58,7 +61,7 @@ function MaintenanceRequest({ navigation }) {
                 </TouchableOpacity>
 
                 <TouchableOpacity onPress={() => navigation.navigate("settings")}>
-                    <Image size="10" source={require('../assets/P1B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="password" />
+                    <Image size="10" source={require('../assets/SE2B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="settings" />
                 </TouchableOpacity>
 
                 <TouchableOpacity onPress={() => setIsOpen1(!Exit)}>

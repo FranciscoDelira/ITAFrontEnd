@@ -28,31 +28,28 @@ function Profile ({navigation}) {
             <HStack height="10%" alignItems="center" alignSelf="center" space="1/6">
               
                 <TouchableOpacity onPress={() => navigation.navigate("maintenance")}>
-                    <Image size="10" source={require('../assets/C1B.png')} alt="maintenance" />
+                    <Image size="10" source={require('../assets/C1B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="maintenance" />
                 </TouchableOpacity>
                 
                 <TouchableOpacity onPress={() => navigation.navigate("settings")}>
-                    <Image size="10" source={require('../assets/P1B.png')} alt="password" />
+                    <Image size="10" source={require('../assets/SE2B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="settings" />
                 </TouchableOpacity>
                 
-                <TouchableOpacity onPress={()=>setIsOpen1(!Exit)}>
-                    <Image size="10" source={require('../assets/CS2B.png')} alt="exit"/>
+                <TouchableOpacity onPress={() => setIsOpen1(!Exit)}>
+                    <Image size="10" source={require('../assets/CS2B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="exit" />
                     <AlertDialog isOpen={Exit} onClose={CloseE}>
-                        <AlertDialog.Content bg="white">                            
-                            <AlertDialog.Body bg="white" _text={{
-                                color: "blue.900",
-                                fontSize: "md",
-                                textAlign: "center"}}>
+                        <AlertDialog.Content _dark={{bg: "tema.2"}} _light={{bg: "tema.3"}}>
+                            <AlertDialog.Body _dark={{bg: "tema.2"}} _light={{bg: "tema.3"}} alignSelf="center">
                                 <TouchableOpacity onPress={CloseE}>
-                                    <Image size="5" marginLeft="90%" marginBottom="10%" source={require('../assets/XA.png')} alt="close"/>
+                                    <Image size="5" marginLeft="90%" marginBottom="10%" source={require('../assets/XA.png')} _dark={{ color: "tema.3", tintColor: "tema.3" }} _light={{ color: "tema.2", tintColor: "tema.2" }} alt="close" />
                                 </TouchableOpacity>
-                                ¿Esta seguro de cerrar sesión?
-                                <Button.Group marginTop="10%" alignSelf={"flex-end"} colorScheme="darkBlue" borderRadius="xl">
-                                    <Button onPress={() => navigation.navigate("login")}>
-                                        Confirmar
+                                <Text _dark={{color: "tema.3"}} _light={{color: "tema.2"}} fontSize="md" textAlign="center">¿Esta seguro de cerrar sesión?</Text>
+                                <Button.Group marginTop="10%" alignSelf={"flex-end"} >
+                                    <Button borderRadius="10" _pressed={{ bg: 'tema.6' }} _dark={{ bg: "tema.3" }} _light={{ bg: "tema.2" }} onPress={() => navigation.navigate("login")}>
+                                        <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }}>Confirmar</Text>
                                     </Button>
-                                    <Button onPress={CloseE}>
-                                        Cancelar
+                                    <Button borderRadius="10" _pressed={{ bg: 'tema.6' }} _dark={{ bg: "tema.3" }} _light={{ bg: "tema.2" }} onPress={CloseE}>
+                                        <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }}>Cancelar</Text>
                                     </Button>
                                 </Button.Group>
                             </AlertDialog.Body>
