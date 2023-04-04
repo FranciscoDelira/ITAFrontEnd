@@ -8,6 +8,8 @@ import Password from "./Password";
 import ReleasedOrder from "./ReleasedOrder";
 import ApprovedOrder from "./ApprovedOrder";
 import PendingOrder from "./PendingOrder";
+import ActiveMainRe from "./ActiveMaintenanceRequest";
+import HistoryRe from "./HistoryRequest";
 
 const Stack = createNativeStackNavigator();
 
@@ -22,6 +24,8 @@ function Navegacion () {
             <Stack.Screen name="releasedO" component={ReleasedOrder}/>
             <Stack.Screen name="approvedO" component={ApprovedOrder}/>
             <Stack.Screen name="pendingO" component={PendingOrder}/>
+            <Stack.Screen name="activemainre" component={ActiveMainRe}/>
+            <Stack.Screen name="historyre" component={HistoryRe}/>
         </Stack.Navigator>
     )
 }
