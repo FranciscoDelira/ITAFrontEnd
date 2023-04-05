@@ -16,12 +16,12 @@ function App() {
         6: '#CDCDCD',
         7: '#FF0000',
         8: '#D00000',
-        9: 'FF8000',
-        10: '029424',
+        9: '#FF8000',
+        10: '#029424',
       },
     },
     config: {
-      initialColorMode: 'light',
+      initialColorMode: 'dark',
     },
   });
   
