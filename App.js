@@ -28,7 +28,8 @@ function App() {
   return (
     <NativeBaseProvider theme={theme}>
       <NavigationContainer>
-        <Navegacion/>
+        <MaintenanceWorkOrder/>
+
       </NavigationContainer>
     </NativeBaseProvider>
   );
