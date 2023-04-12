@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Button, VStack, Heading, Image, HStack, AlertDialog, Text } from "native-base";
 import { TouchableOpacity } from "react-native";
 
-function PendingOrder2({ navigation }) {
+function MenWorOrdPen({ navigation }) {
 
     const [Exit, setIsOpen1] = React.useState(false);
     const CloseE = () => setIsOpen1(false);
@@ -66,4 +66,4 @@ function PendingOrder2({ navigation }) {
     )
 }
 
-export default PendingOrder2;
+export default MenWorOrdPen;

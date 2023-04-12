@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Button, VStack, Heading, Image, HStack, AlertDialog, Text } from "native-base";
 import { TouchableOpacity } from "react-native";
 
-function WorkOrders({ navigation }) {
+function MenWorOrd({ navigation }) {
 
     const [Info, setIsOpen] = React.useState(false);
     const CloseI = () => setIsOpen(false);
@@ -89,4 +89,4 @@ function WorkOrders({ navigation }) {
     )
 }
 
-export default WorkOrders;
+export default MenWorOrd;

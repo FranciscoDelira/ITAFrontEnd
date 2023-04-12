@@ -2,7 +2,7 @@ import React from "react";
 import { VStack, Text, Heading, Image, Box, HStack, AlertDialog, Button, TextArea, Divider } from "native-base";
 import { TouchableOpacity } from "react-native";
 
-function WorkOrderView(){
+function VieWorOrdApr(){
     const [Exit, setIsOpen1] = React.useState(false);
     const CloseE = () => setIsOpen1(false);
 
@@ -66,4 +66,4 @@ function WorkOrderView(){
     )
 }
 
-export default WorkOrderView;
+export default VieWorOrdApr;

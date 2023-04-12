@@ -2,7 +2,7 @@ import React from "react";
 import { VStack, Text, Heading, Image, Box, HStack, AlertDialog, Button, Select, CheckIcon, TextArea } from "native-base";
 import { TouchableOpacity } from "react-native";
 
-function CorrectiveMaintenanceRequest(){
+function ForMaiReq(){
     const [Info, setIsOpen] = React.useState(false);
     const CloseI = () => setIsOpen(false);
 
@@ -130,4 +130,4 @@ function CorrectiveMaintenanceRequest(){
     )
 }
 
-export default CorrectiveMaintenanceRequest;
+export default ForMaiReq;
