@@ -6,7 +6,7 @@ import Settings from "./Settings";
 import Login from "./Login";
 import Password from "./Password";
 import ReleasedOrder from "./ReleasedOrder";
-import ApprovedOrder from "./ApprovedOrder";
+import ApprovedOrder from "./MenuWorkOrderReleased";
 import PendingOrder from "./PendingOrder";
 import MenuMaintenanceActive from "./MenuMaintenanceActive";
 import HistoryRe from "./MenuMaintenanceHistory";

@@ -21,9 +21,9 @@ function ViewWorkOrder(){
                 <TextArea marginTop="2%" alignItems={'center'} justifyContent={'center'} _dark={{color: "tema.2", borderColor:"tema.2"}} _light={{color: "tema.3", borderColor:"tema.2"}} fontSize="md">Contactos de laboratorio de redes area C no tienen corriente</TextArea>            
                 <Text _dark={{color: "tema.2"}} _light={{color: "tema.3"}} marginTop="3%" fontSize="xl" bold>Evidencia: </Text>
                     <HStack justifyContent={"center"}>
-                    <Image margin={'2%'} source={require("../assets/Isaac1.png")} alt='evidencia' size="md"/>
-                    <Image margin={'2%'} source={require("../assets/Isaac2.png")} alt='evidencia1' size="md"/>
-                    <Image margin={'2%'} source={require("../assets/Isaac1.png")} alt='evidencia2' size="md"/>
+                    <Image margin={'2%'} source={require("../assets/PL1N.png")} alt='evidencia' size="md"/>
+                    <Image margin={'2%'} source={require("../assets/PL1N.png")} alt='evidencia1' size="md"/>
+                    <Image margin={'2%'} source={require("../assets/PL1N.png")} alt='evidencia2' size="md"/>
                     </HStack>
                 
                     <Button alignSelf={'center'} marginTop="5%" _pressed={{ bg: 'tema.6' }} width="40%" borderRadius={"20"} _dark={{ bg: "tema.2" }} _light={{ bg: "tema.3" }} >

@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Button, VStack, Heading, Image, HStack, AlertDialog, Text } from "native-base";
 import { TouchableOpacity } from "react-native";
 
-function HistoryRe({ navigation }) {
+function HistoryRe2({ navigation }) {
 
     const [Exit, setIsOpen1] = React.useState(false);
     const CloseE = () => setIsOpen1(false);
@@ -65,4 +65,4 @@ function HistoryRe({ navigation }) {
     )
 }
 
-export default HistoryRe;
+export default HistoryRe2;
