@@ -12,14 +12,15 @@ function MenWorOrdApr({ navigation }) {
 
             <Image alignSelf="center" width="100%" height="10%" marginTop="10%" source={require('../assets/TNM3A.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="TECNM" />
 
-            <Heading height="15%" textAlign={"center"} alignSelf="center" _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="4xl">Historial de solicitudes</Heading>
+            <Heading height="15%" textAlign={"center"} alignSelf="center" _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="4xl" paddingTop="5%">Ordenes de trabajo aprobadas</Heading>
 
             <Box height="55%" w="90%" alignSelf="center" >
                 <Box _dark={{ bg: "tema.2", color: "tema.3" }} _light={{ bg: "tema.3", color: "tema.2" }} _pressed={{ bg: 'tema.6' }} borderRadius="xl" height={"32%"} marginBottom="5%" padding={"3%"}>
                     <Text bold fontSize="xs" _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }}>Folio: </Text>
+                    <Text bold fontSize="xs" _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }}>Area solicitante: </Text>
                     <Text bold fontSize="xs" _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }}>Fecha de solicitud: </Text>
-                    <HStack marginTop={"10%"} alignItems="center">
-                        <Text bold fontSize="sm" _dark={{ color: "tema.10" }} _light={{ color: "tema.10" }}>LIBERADA</Text>
+                    <HStack marginTop={"5%"} alignItems="center">
+                        <Text bold fontSize="sm" _dark={{ color: "tema.10" }} _light={{ color: "tema.10" }}>APROBADA</Text>
                         <Button size="9" borderRadius={25} marginLeft={"58%"} variant="unstyled" _pressed={{ bg: 'tema.6' }} onPress={() => navigation.navigate("")}>
                             <Image size="7" source={require('../assets/PL1N.png')} _dark={{ color: "tema.3", tintColor: "tema.3" }} _light={{ color: "tema.2", tintColor: "tema.2" }} alt="open" />
                         </Button>

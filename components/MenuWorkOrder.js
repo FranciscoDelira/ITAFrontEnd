@@ -15,7 +15,7 @@ function MenWorOrd({ navigation }) {
 
             <Image alignSelf="center" width="100%" height="10%" marginTop="10%" source={require('../assets/TNM3A.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="TECNM" />
 
-            <Heading height="15%" alignSelf="center" _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="4xl" paddingTop="5%">Órdenes de Trabajo de Mantenimiento</Heading>
+            <Heading textAlign={"center"} height="15%" _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="4xl" >Órdenes de Trabajo de Mantenimiento</Heading>
 
             <Box height="55%" w="90%" alignSelf="center">
 
@@ -40,7 +40,7 @@ function MenWorOrd({ navigation }) {
                 </TouchableOpacity>
 
                 <TouchableOpacity onPress={() => setIsOpen(!Info)}>
-                    <Image size="10" source={require('../assets/S1B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="info" />
+                    <Image size="12" source={require('../assets/S1B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="info" />
                     <AlertDialog isOpen={Info} onClose={CloseI}>
                         <AlertDialog.Content _dark={{bg: "tema.2"}} _light={{bg: "tema.3"}}>
                             <AlertDialog.Body _dark={{bg: "tema.2"}} _light={{bg: "tema.3"}} alignSelf="center">
