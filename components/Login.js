@@ -41,8 +41,7 @@ function Login({ navigation }) {
           navigation.navigate("maintenance");
         } else if (response.data.user.role === 'Mantenimiento') {
           console.log('navigation work order');
-          //AGREGAR LA NAVEGACION AL MENU WORK ORDER
-          //navigation.navigate("maintenance");
+          navigation.navigate("maintenance");
         }
       }
     } catch (error) {
