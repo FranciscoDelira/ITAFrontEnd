@@ -2,7 +2,7 @@ import React from "react";
 import { VStack, Text, Heading, Image, Box, HStack, AlertDialog, Button, TextArea, Divider } from "native-base";
 import { TouchableOpacity } from "react-native";
 
-function ForWorOrd() {
+function ForWorOrd({navigation}) {
     const [Info, setIsOpen] = React.useState(false);
     const CloseI = () => setIsOpen(false);
 
