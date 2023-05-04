@@ -35,7 +35,7 @@ function Settings({ navigation }) {
 
             <HStack height="10%" alignItems="center" alignSelf="center" space="1/6">
 
-                <TouchableOpacity onPress={() => navigation.navigate("maintenance")}>
+             *   <TouchableOpacity onPress={() => navigation.navigate("")}>
                     <Image size="10" source={require('../assets/C1A.png')} alt="maintenance" />
                 </TouchableOpacity>
 
@@ -70,8 +70,6 @@ function Settings({ navigation }) {
                 </TouchableOpacity>
 
             </HStack>
-
- {/* <Button onPress={()=>{toggleColorMode();newTheme(colorMode)}}>Toggle</Button>*/}
 
         </VStack>
     )

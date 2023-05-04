@@ -21,7 +21,7 @@ function MenMaiHis({ navigation }) {
                     <Text bold fontSize="xs" _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }}>Fecha de solicitud: </Text>
                     <HStack marginTop={"10%"} alignItems="center">
                         <Text bold fontSize="sm" color="tema.10" >LIBERADA</Text>
-                        <Button size="9" borderRadius={25} marginLeft={"58%"} variant="unstyled" _pressed={{ bg: 'tema.6' }} onPress={() => navigation.navigate("")}>
+                        <Button size="9" borderRadius={25} marginLeft={"58%"} variant="unstyled" _pressed={{ bg: 'tema.6' }} onPress={() => navigation.navigate("viemairel")}>
                             <Image size="7" source={require('../assets/PL1N.png')} _dark={{ color: "tema.3", tintColor: "tema.3" }} _light={{ color: "tema.2", tintColor: "tema.2" }} alt="open" />
                         </Button>
                     </HStack>
@@ -31,7 +31,7 @@ function MenMaiHis({ navigation }) {
 
             <HStack height="10%" alignItems="center" alignSelf="center" space="10">
 
-                 <TouchableOpacity onPress={() => navigation.navigate("maintenance")}>
+                 <TouchableOpacity onPress={() => navigation.navigate("menmaireq")}>
                     <Image size="10" source={require('../assets/C1B.png')} alt="maintenance" />
                 </TouchableOpacity>
                 

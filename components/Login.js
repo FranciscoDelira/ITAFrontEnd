@@ -1,12 +1,10 @@
 import React from "react";
-import { useState } from 'react';
 import axios from "axios";
 import { Text, Image, FormControl, Input, Button, VStack } from "native-base";
 import { Alert } from "react-native";
 
 function Login({ navigation }) {
-  const [formReact, setFormReact] = React.useState({})
-  const [isLoading, setIsLoading] = useState(false);
+  const [formReact, setFormReact] = React.useState({});
 
   const alertEmailincorrect = () => {
     Alert.alert('Credenciales inválidas', 
@@ -38,10 +36,10 @@ function Login({ navigation }) {
         //valida el rol del usuario ingresado
         if (response.data.user.role === 'Jefe Departamento') {
           console.log('navigation maintenance request');
-          navigation.navigate("maintenance");
+          navigation.navigate("menmainreq");
         } else if (response.data.user.role === 'Mantenimiento') {
           console.log('navigation work order');
-          navigation.navigate("maintenance");
+          navigation.navigate("menworord");
         }
       }
     } catch (error) {
@@ -62,12 +60,12 @@ function Login({ navigation }) {
       <VStack width="100%" height="25%" alignItems="center" >
 
         <Button width="60%" borderRadius={"10"} marginTop="8%" _pressed={{ bg: 'tema.6' }} _dark={{ bg: "tema.2" }} _light={{ bg: "tema.3" }}
-          onPress={onSubmit} isLoading={isLoading}>
+          onPress={onSubmit}>
           <Text fontSize="xl" _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }} >Iniciar Sesión</Text>
         </Button>
 
-        <Text alignSelf="flex-end" marginTop="8%" marginRight="3%" fontSize="xs" underline opacity="50" _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }}>¿Has Olvidado Tu Contraseña?</Text>
-
+        {/*<Text alignSelf="flex-end" marginTop="8%" marginRight="3%" fontSize="xs" underline opacity="50" _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }}>¿Has Olvidado Tu Contraseña?</Text>*/}
+        
         <Text alignSelf="center" marginTop="30%" opacity="20" _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }}>FROM  ITA</Text>
 
       </VStack>

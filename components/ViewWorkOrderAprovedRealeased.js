@@ -29,7 +29,7 @@ function VieWorOrdApr({navigation}){
 
             <HStack height="10%" alignItems="center" alignSelf="center" space="10">
 
-                <TouchableOpacity onPress={() => navigation.navigate("profile")}>
+                <TouchableOpacity onPress={() => navigation.navigate("menworord")}>
                     <Image size="10" source={require('../assets/U1B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="profile" />
                 </TouchableOpacity>
 

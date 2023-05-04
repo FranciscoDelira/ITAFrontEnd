@@ -93,23 +93,23 @@ function VieMaiReq() {
 
             <HStack height="10%" alignItems="center" alignSelf="center" space="10">
                 
-                <TouchableOpacity onPress={() => navigation.navigate("profile")}>
+                <TouchableOpacity onPress={() => navigation.navigate("menmaireq")}>
                     <Image size="10" source={require('../assets/U1B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="profile" />
                 </TouchableOpacity>
 
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate("settings")}>
                     <Image size="10" source={require('../assets/P1B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="info" />
                 </TouchableOpacity>
 
                 <TouchableOpacity onPress={() => setIsOpen1(!Exit)}>
                     <Image size="10" source={require('../assets/CS2B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="exit" />
                     <AlertDialog isOpen={Exit} onClose={CloseE}>
-                        <AlertDialog.Content _dark={{ bg: "tema.3" }} _light={{ bg: "tema.2" }}>
-                            <AlertDialog.Body _dark={{ bg: "tema.3" }} _light={{ bg: "tema.2" }} alignSelf="center">
+                        <AlertDialog.Content _dark={{bg: "tema.3"}} _light={{bg: "tema.2"}}>
+                            <AlertDialog.Body _dark={{bg: "tema.3"}} _light={{bg: "tema.2"}} alignSelf="center">
                                 <TouchableOpacity onPress={CloseE}>
                                     <Image size="5" marginLeft="90%" marginBottom="10%" source={require('../assets/XA.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="close" />
                                 </TouchableOpacity>
-                                <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="md" textAlign="center">¿Esta seguro de cerrar sesión?</Text>
+                                <Text _dark={{color: "tema.2"}} _light={{color: "tema.3"}} fontSize="md" textAlign="center">¿Esta seguro de cerrar sesión?</Text>
                                 <Button.Group marginTop="10%" alignSelf={"flex-end"} >
                                     <Button borderRadius="10" _pressed={{ bg: 'tema.6' }} _dark={{ bg: "tema.2" }} _light={{ bg: "tema.3" }} onPress={() => navigation.navigate("login")}>
                                         <Text _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }}>Confirmar</Text>

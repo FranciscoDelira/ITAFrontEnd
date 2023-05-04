@@ -15,22 +15,24 @@ function MenWorOrdPen({ navigation }) {
             <Heading height="15%" textAlign={"center"} alignSelf="center" _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="4xl" paddingTop="5%">Ordenes de trabajo pendientes</Heading>
 
             <Box height="55%" w="90%" alignSelf="center" >
+
                 <Box _dark={{ bg: "tema.2", color: "tema.3" }} _light={{ bg: "tema.3", color: "tema.2" }} _pressed={{ bg: 'tema.6' }} borderRadius="xl" height={"32%"} marginBottom="5%" padding={"3%"}>
                     <Text bold fontSize="xs" _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }}>Folio: </Text>
                     <Text bold fontSize="xs" _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }}>Area solicitante: </Text>
                     <Text bold fontSize="xs" _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }}>Fecha de solicitud: </Text>
                     <HStack marginTop={"5%"} alignItems="center">
                         <Text bold fontSize="sm" _dark={{ color: "tema.7" }} _light={{ color: "tema.8" }}>PENDIENTE</Text>
-                        <Button size="9" borderRadius={25} marginLeft={"58%"} variant="unstyled" _pressed={{ bg: 'tema.6' }} onPress={() => navigation.navigate("")}>
+                        <Button size="9" borderRadius={25} marginLeft={"58%"} variant="unstyled" _pressed={{ bg: 'tema.6' }} onPress={() => navigation.navigate("vieworordpen")}>
                             <Image size="7" source={require('../assets/PL1N.png')} _dark={{ color: "tema.3", tintColor: "tema.3" }} _light={{ color: "tema.2", tintColor: "tema.2" }} alt="open" />
                         </Button>
                     </HStack>
                 </Box>
+                
             </Box>
 
             <HStack height="10%" alignItems="center" alignSelf="center" space="10">
 
-                 <TouchableOpacity onPress={() => navigation.navigate("")}>
+                 <TouchableOpacity onPress={() => navigation.navigate("menworord")}>
                     <Image size="10" source={require('../assets/C1B.png')} alt="order" />
                 </TouchableOpacity>
                 

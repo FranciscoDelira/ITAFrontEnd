@@ -4,14 +4,6 @@ import { TouchableOpacity } from "react-native";
 
 function Password({ navigation }) {
 
-    const [Exit, setIsOpen1] = React.useState(false);
-    const CloseE = () => setIsOpen1(false);
-
-    {/* const {
-        colorMode,
-        toggleColorMode
-      } = useColorMode(); */}
-
     return (
         <VStack height="100%" width="100%" space={4} _dark={{ bg: "tema.3" }} _light={{ bg: "tema.2" }}>
 

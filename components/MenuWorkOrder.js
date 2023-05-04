@@ -4,9 +4,6 @@ import { TouchableOpacity } from "react-native";
 
 function MenWorOrd({ navigation }) {
 
-    const [Info, setIsOpen] = React.useState(false);
-    const CloseI = () => setIsOpen(false);
-
     const [Exit, setIsOpen1] = React.useState(false);
     const CloseE = () => setIsOpen1(false);
 
@@ -19,15 +16,18 @@ function MenWorOrd({ navigation }) {
 
             <Box height="55%" w="90%" alignSelf="center">
 
-                <Button _dark={{ bg: "tema.2", color: "tema.3" }} _light={{ bg: "tema.3", color: "tema.2" }} _pressed={{bg:'tema.6'}} borderRadius="xl" h="32">
+                <Button _dark={{ bg: "tema.2", color: "tema.3" }} _light={{ bg: "tema.3", color: "tema.2" }} _pressed={{bg:'tema.6'}} borderRadius="xl" h="32"
+                onPress={() => navigation.navigate("menworordpen")}>
                     <Text textAlign="center" fontSize="3xl" _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }}>Órdenes de Trabajo Pendientes</Text>
                 </Button>
 
-                <Button _dark={{ bg: "tema.2", color: "tema.3" }} _light={{ bg: "tema.3", color: "tema.2" }} _pressed={{bg:'tema.6'}} borderRadius="xl" h="32" marginTop="5%" _text={{ fontSize: "3xl" }}>
+                <Button _dark={{ bg: "tema.2", color: "tema.3" }} _light={{ bg: "tema.3", color: "tema.2" }} _pressed={{bg:'tema.6'}} borderRadius="xl" h="32" 
+                onPress={() => navigation.navigate("menworordapr")} marginTop="5%" _text={{ fontSize: "3xl" }}>
                     <Text textAlign="center" fontSize="3xl" _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }}>Órdenes de Trabajo Aprobadas</Text>
                 </Button>
 
-                <Button _dark={{ bg: "tema.2", color: "tema.3" }} _light={{ bg: "tema.3", color: "tema.2" }} _pressed={{bg:'tema.6'}} borderRadius="xl" h="32" marginTop="5%" _text={{ fontSize: "3xl" }}>
+                <Button _dark={{ bg: "tema.2", color: "tema.3" }} _light={{ bg: "tema.3", color: "tema.2" }} _pressed={{bg:'tema.6'}} borderRadius="xl" h="32" 
+                onPress={() => navigation.navigate("menworordrel")}marginTop="5%" _text={{ fontSize: "3xl" }}>
                     <Text textAlign="center" fontSize="3xl" _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }}>Órdenes de Trabajo Liberadas</Text>
                 </Button>
 
@@ -39,25 +39,7 @@ function MenWorOrd({ navigation }) {
                     <Image size="10" source={require('../assets/U1B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="profile" />
                 </TouchableOpacity>
 
-                <TouchableOpacity onPress={() => setIsOpen(!Info)}>
-                    <Image size="12" source={require('../assets/S1B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="info" />
-                    <AlertDialog isOpen={Info} onClose={CloseI}>
-                        <AlertDialog.Content _dark={{bg: "tema.2"}} _light={{bg: "tema.3"}}>
-                            <AlertDialog.Body _dark={{bg: "tema.2"}} _light={{bg: "tema.3"}} alignSelf="center">
-                                <TouchableOpacity onPress={CloseI}>
-                                    <Image size="5" marginLeft="90%" marginBottom="10%" source={require('../assets/XA.png')} _dark={{ color: "tema.3", tintColor: "tema.3" }} _light={{ color: "tema.2", tintColor: "tema.2" }} alt="close" />
-                                </TouchableOpacity> 
-                                <Text _dark={{color: "tema.3"}} _light={{color: "tema.2"}} fontSize="md" textAlign="center">"Reporta las fallas en la infraestructura dentro del ITA.</Text>  {"\t"}
-                                <Text _dark={{color: "tema.3"}} _light={{color: "tema.2"}} fontSize="md" textAlign="center">Puedes consultar las solicitudes de mantenimiento activas, así como el historial de estas".</Text> 
-                                <Button marginTop="10%" alignSelf="center" w="90px" borderRadius="10" _pressed={{ bg: 'tema.6' }} _dark={{ bg: "tema.3" }} _light={{ bg: "tema.2" }} onPress={CloseI}>
-                                    <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }}>Aceptar</Text>
-                                </Button>
-                            </AlertDialog.Body>
-                        </AlertDialog.Content>
-                    </AlertDialog>
-                </TouchableOpacity>
-
-                <TouchableOpacity onPress={() => navigation.navigate("password")}>
+                <TouchableOpacity onPress={() => navigation.navigate("settings")}>
                     <Image size="10" source={require('../assets/P1B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="password" />
                 </TouchableOpacity>
 
