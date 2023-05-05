@@ -38,11 +38,11 @@ function VieWorOrdPen({navigation}) {
             <HStack height="10%" alignItems="center" alignSelf="center" space="10">
 
                 <TouchableOpacity onPress={() => navigation.navigate("menworord")}>
-                    <Image size="10" source={require('../assets/U1B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="profile" />
+                    <Image size="10" source={require('../assets/C1B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="home" />
                 </TouchableOpacity>
 
                 <TouchableOpacity onPress={() => navigation.navigate("settings")}>
-                    <Image size="10" source={require('../assets/P1A.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="settings" />
+                    <Image size="10" source={require('../assets/SE2B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="settings" />
                 </TouchableOpacity>
 
                 <TouchableOpacity onPress={() => setIsOpen1(!Exit)}>

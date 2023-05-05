@@ -22,7 +22,7 @@ function Settings({ navigation }) {
             <Box height="53%" width={"95%"} alignSelf="center" p="2">
                 <HStack alignItems="center">
                     <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="xl" >Cambiar contraseña</Text> 
-                    <Button size="9" borderRadius={25} marginLeft={"30%"} variant="unstyled" _pressed={{ bg: 'tema.6' }} onPress={() => navigation.navigate("")}>
+                    <Button size="9" borderRadius={25} marginLeft={"30%"} variant="unstyled" _pressed={{ bg: 'tema.6' }} onPress={() => navigation.navigate("password")}>
                         <Image size="7" source={require('../assets/PL1N.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="open" />
                     </Button>
                 </HStack>
@@ -35,7 +35,8 @@ function Settings({ navigation }) {
 
             <HStack height="10%" alignItems="center" alignSelf="center" space="1/6">
 
-             *   <TouchableOpacity onPress={() => navigation.navigate("")}>
+             {/* SE DEBE VALIDAR SI EL USUARIO ES JEFE O DE MANTENIMIENTO PARA MANDAR A SU RESPECTIVA SCREEN */}   
+             <TouchableOpacity onPress={() => navigation.navigate("")}>
                     <Image size="10" source={require('../assets/C1A.png')} alt="maintenance" />
                 </TouchableOpacity>
 

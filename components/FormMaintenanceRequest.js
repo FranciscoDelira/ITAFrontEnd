@@ -69,7 +69,7 @@ function ForMaiReq({ navigation }){
                                     <Image size="5" marginLeft="90%" marginBottom="10%" source={require('../assets/XA.png')} _dark={{ color: "tema.3", tintColor: "tema.3" }} _light={{ color: "tema.2", tintColor: "tema.2" }} alt="close" />
                                 </TouchableOpacity> 
                                 <Text _dark={{color: "tema.3"}} _light={{color: "tema.2"}} fontSize="md" textAlign="center">¡Solicitud enviada correctamente!</Text>
-                                <Button marginTop="10%" alignSelf="center" w="90px" borderRadius="10" _pressed={{ bg: 'tema.6' }} _dark={{ bg: "tema.3" }} _light={{ bg: "tema.2" }} onPress={CloseS}>
+                                <Button marginTop="10%" alignSelf="center" w="90px" borderRadius="10" _pressed={{ bg: 'tema.6' }} _dark={{ bg: "tema.3" }} _light={{ bg: "tema.2" }}  onPress={() => navigation.navigate("menmaireq")}>
                                     <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }}>Aceptar</Text>
                                 </Button>
                             </AlertDialog.Body>
@@ -77,14 +77,14 @@ function ForMaiReq({ navigation }){
                     </AlertDialog>
                 </Button>
                 
-                <Button marginTop="3%" rounded="lg" w="40%" alignSelf="center" _pressed={{ bg: 'tema.6' }} _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }}>Cancelar</Button>
+                <Button marginTop="3%" rounded="lg" w="40%" alignSelf="center" _pressed={{ bg: 'tema.6' }} _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} onPress={() => navigation.navigate("menmaireq")}>Cancelar</Button>
             
             </Box>
 
             <HStack height="10%" alignItems="center" alignSelf="center" space="10">
 
                 <TouchableOpacity onPress={() => navigation.navigate("menmainreq")}>
-                    <Image size="10" source={require('../assets/U1B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="" />
+                    <Image size="10" source={require('../assets/C1B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="profile" />
                 </TouchableOpacity>
 
                 <TouchableOpacity onPress={() => setIsOpen(!Info)}>

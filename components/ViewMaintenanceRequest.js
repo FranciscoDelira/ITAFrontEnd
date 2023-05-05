@@ -67,7 +67,7 @@ function VieMaiReq({navigation}) {
                                                             <Image size="5" marginLeft="90%" marginBottom="10%" source={require('../assets/XA.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="close" />
                                                         </TouchableOpacity>
                                                         <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="md" textAlign="center">¡Solicitud Liberada Correctamente!</Text>
-                                                        <Button marginTop="10%" alignSelf="center" w="90px" borderRadius="10" _pressed={{ bg: 'tema.6' }} _dark={{ bg: "tema.2" }} _light={{ bg: "tema.3" }} onPress={CloseR}>
+                                                        <Button marginTop="10%" alignSelf="center" w="90px" borderRadius="10" _pressed={{ bg: 'tema.6' }} _dark={{ bg: "tema.2" }} _light={{ bg: "tema.3" }} onPress={() => navigation.navigate("menmaiact")}>
                                                             <Text _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }}>Aceptar</Text>
                                                         </Button>
                                                     </AlertDialog.Body>
@@ -83,7 +83,7 @@ function VieMaiReq({navigation}) {
                         </AlertDialog>
                     </Button>
 
-                    <Button _pressed={{ bg: 'tema.6' }} width="40%" borderRadius={"20"} _dark={{ bg: "tema.2" }} _light={{ bg: "tema.3" }} >
+                    <Button _pressed={{ bg: 'tema.6' }} width="40%" borderRadius={"20"} _dark={{ bg: "tema.2" }} _light={{ bg: "tema.3" }} onPress={() => navigation.navigate("menmaiact")}>
                         <Text _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }} >Cancelar</Text>
                     </Button>
 

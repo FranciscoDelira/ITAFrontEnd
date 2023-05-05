@@ -22,7 +22,7 @@ function MenWorOrdRel({ navigation }) {
                     <Text bold fontSize="xs" _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }}>Fecha de solicitud: </Text>
                     <HStack marginTop={"8%"} alignItems="center">
                         <Text bold fontSize="sm" _dark={{ color: "tema.9" }} _light={{ color: "tema.9" }}>LIBERADA</Text>
-                        <Button size="9" borderRadius={25} marginLeft={"58%"} variant="unstyled" _pressed={{ bg: 'tema.6' }} onPress={() => navigation.navigate("vieworordpen")}>
+                        <Button size="9" borderRadius={25} marginLeft={"58%"} variant="unstyled" _pressed={{ bg: 'tema.6' }} onPress={() => navigation.navigate("vieworordapr")}>
                             <Image size="7" source={require('../assets/PL1N.png')} _dark={{ color: "tema.3", tintColor: "tema.3" }} _light={{ color: "tema.2", tintColor: "tema.2" }} alt="open" />
                         </Button>
                     </HStack>

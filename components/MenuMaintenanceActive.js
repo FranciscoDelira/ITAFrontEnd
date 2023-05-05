@@ -30,7 +30,7 @@ function MenMaiAct({ navigation }) {
             <HStack height="10%" alignItems="center" alignSelf="center" space="10">
 
                  <TouchableOpacity onPress={() => navigation.navigate("menmaireq")}>
-                    <Image size="10" source={require('../assets/C1B.png')} alt="" />
+                    <Image size="10" source={require('../assets/C1B.png')} alt="home" />
                 </TouchableOpacity>
                 
                 <TouchableOpacity onPress={() => navigation.navigate("settings")}>

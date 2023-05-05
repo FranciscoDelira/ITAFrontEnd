@@ -22,7 +22,7 @@ function MenWorOrd({ navigation }) {
                 </Button>
 
                 <Button _dark={{ bg: "tema.2", color: "tema.3" }} _light={{ bg: "tema.3", color: "tema.2" }} _pressed={{bg:'tema.6'}} borderRadius="xl" h="32" 
-                onPress={() => navigation.navigate("menworordapr")} marginTop="5%" _text={{ fontSize: "3xl" }}>
+                onPress={() => navigation.navigate("menwordordapr") } marginTop="5%" _text={{ fontSize: "3xl" }}>
                     <Text textAlign="center" fontSize="3xl" _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }}>Órdenes de Trabajo Aprobadas</Text>
                 </Button>
 
@@ -40,7 +40,7 @@ function MenWorOrd({ navigation }) {
                 </TouchableOpacity>
 
                 <TouchableOpacity onPress={() => navigation.navigate("settings")}>
-                    <Image size="10" source={require('../assets/P1B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="password" />
+                    <Image size="10" source={require('../assets/SE2B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="settings" />
                 </TouchableOpacity>
 
                 <TouchableOpacity onPress={() => setIsOpen1(!Exit)}>

@@ -26,18 +26,18 @@ function VieMaiRel({navigation}){
                 <TextArea _dark={{color: "tema.2", borderColor:"tema.2"}} _light={{color: "tema.3", borderColor:"tema.2"}} fontSize="md">Contactos de laboratorio de redes area C no tienen corriente</TextArea>
                 <Text _dark={{color: "tema.2"}} _light={{color: "tema.3"}} fontSize="xl" bold>Evidencia: </Text>
                     <HStack justifyContent={"center"}>
-                    <Image source={require("../assets/PL1N.png")} size="md"/>
-                    <Image source={require("../assets/PL1N.png")} size="md"/>
-                    <Image source={require("../assets/PL1N.png")} size="md"/>
+                    <Image source={require("../assets/PL1N.png")} size="md" alt="evidence1"/>
+                    <Image source={require("../assets/PL1N.png")} size="md" alt="evidence2"/>
+                    <Image source={require("../assets/PL1N.png")} size="md" alt="evidence3"/>
                     </HStack>
                 <Text _dark={{color: "tema.2"}} _light={{color: "tema.3"}} fontSize="md"><Text bold fontSize={'xl'}>Asignado A: </Text>Pablo :</Text>
                 <Text _dark={{color: "tema.2"}} _light={{color: "tema.3"}} fontSize="md"><Text bold fontSize={'xl'}>Fecha de Realizacion: </Text> 04/03/2023 </Text>
                 <Text _dark={{color: "tema.2"}} _light={{color: "tema.3"}} fontSize="md"><Text bold fontSize={'xl'}>Trabajo Realizado: </Text> Dpto. Sistemas y Computacion </Text>
                 <Text _dark={{color: "tema.2"}} _light={{color: "tema.3"}} fontSize="xl" bold>Evidencia de Trabajo: </Text>
                     <HStack justifyContent={"center"}>
-                    <Image source={require("../assets/PL1N.png")} size="md"/>
-                    <Image source={require("../assets/PL1N.png")} size="md"/>
-                    <Image source={require("../assets/PL1N.png")} size="md"/>
+                    <Image source={require("../assets/PL1N.png")} size="md" alt="workevidence1"/>
+                    <Image source={require("../assets/PL1N.png")} size="md" alt="workevidence2"/>
+                    <Image source={require("../assets/PL1N.png")} size="md" alt="workevidence3"/>
                     </HStack>
                 <Text alignSelf={'center'} color={'tema.12'} fontSize="md"><Text  _dark={{color: "tema.2"}} _light={{color: "tema.3"}} bold fontSize={'xl'}>Estatus: </Text> Liberada </Text>
                     

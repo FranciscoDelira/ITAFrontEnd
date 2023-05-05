@@ -24,17 +24,18 @@ function VieWorOrdApr({navigation}){
                 <TextArea h="16"  _dark={{color: "tema.3"}} _light={{color: "tema.2"}}></TextArea>
                 <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="md" marginTop="3%">Evidencia de trabajo:</Text>
                 <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="md" marginTop="3%">(Imagen1)  (Imagen2)  (Imagen3)</Text>
+                {/* El status se debe cambiar según el que tenga en la BD */}
                 <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="md" marginTop="3%" textAlign="center">Estatus: <Text color="orange.400">LIBERADA</Text></Text>
             </Box>
 
             <HStack height="10%" alignItems="center" alignSelf="center" space="10">
 
                 <TouchableOpacity onPress={() => navigation.navigate("menworord")}>
-                    <Image size="10" source={require('../assets/U1B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="profile" />
+                    <Image size="10" source={require('../assets/C1B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="profile" />
                 </TouchableOpacity>
 
                 <TouchableOpacity onPress={() => navigation.navigate("settings")}>
-                    <Image size="10" source={require('../assets/P1A.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="settings" />
+                    <Image size="10" source={require('../assets/SE2B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="settings" />
                 </TouchableOpacity>
 
                 <TouchableOpacity onPress={() => setIsOpen1(!Exit)}>

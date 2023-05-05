@@ -5,6 +5,7 @@ import { Alert } from "react-native";
 
 function Login({ navigation }) {
   const [formReact, setFormReact] = React.useState({});
+  
 
   const alertEmailincorrect = () => {
     Alert.alert('Credenciales inválidas', 
@@ -36,7 +37,7 @@ function Login({ navigation }) {
         //valida el rol del usuario ingresado
         if (response.data.user.role === 'Jefe Departamento') {
           console.log('navigation maintenance request');
-          navigation.navigate("menmainreq");
+          navigation.navigate("menmaireq");
         } else if (response.data.user.role === 'Mantenimiento') {
           console.log('navigation work order');
           navigation.navigate("menworord");

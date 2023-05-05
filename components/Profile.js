@@ -26,9 +26,10 @@ function Profile ({navigation}) {
             </Box>
 
             <HStack height="10%" alignItems="center" alignSelf="center" space="1/6">
-              
-           *    <TouchableOpacity onPress={() => navigation.navigate("")}>
-                    <Image size="10" source={require('../assets/C1B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="maintenance" />
+
+           {/* SE DEBE VALIDAR SI EL USUARIO ES JEFE O DE MANTENIMIENTO PARA MANDAR A SU RESPECTIVA SCREEN */}    
+              <TouchableOpacity onPress={() => navigation.navigate("")}>
+                    <Image size="10" source={require('../assets/C1B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="home" />
                 </TouchableOpacity>
                 
                 <TouchableOpacity onPress={() => navigation.navigate("settings")}>
