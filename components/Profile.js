@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Box, Text, VStack, Heading, Image, HStack, Avatar, AlertDialog, Button} from "native-base";
 import { TouchableOpacity } from "react-native";
+import { useState } from "react";
 
-function Profile ({navigation}) {
+function Profile ({ navigation, route }) {
+    const { personaldata_id } = route.params;
+    console.log(personaldata_id);
 
     const [Exit, setIsOpen1] = React.useState(false);
     const CloseE =() => setIsOpen1(false);
+
+    
 
     return (
         <VStack height="100%" width="100%" space={4} _dark={{bg:"tema.3"}} _light={{bg:"tema.2"}}>
@@ -18,11 +23,15 @@ function Profile ({navigation}) {
 
             <Box height="40%" alignSelf="center" p="2">
                 <Text _dark={{color:"tema.2"}} _light={{color:"tema.3"}} fontSize="3xl" >Nombre: </Text>
-                <Text _dark={{color:"tema.2"}} _light={{color:"tema.3"}} p="2">Francisco de Jesus De lira Martinez</Text>
+                <Text _dark={{color:"tema.2"}} _light={{color:"tema.3"}} p="2"></Text>
+                <Text _dark={{color:"tema.2"}} _light={{color:"tema.3"}} fontSize="3xl" >Apellidos: </Text>
+                <Text _dark={{color:"tema.2"}} _light={{color:"tema.3"}} p="2"></Text>
                 <Text _dark={{color:"tema.2"}} _light={{color:"tema.3"}} fontSize="3xl" >Correo: </Text>
-                <Text _dark={{color:"tema.2"}} _light={{color:"tema.3"}} p="2">19151704@aguascalientes.tecnm.mx</Text>
+                <Text _dark={{color:"tema.2"}} _light={{color:"tema.3"}} p="2"></Text>
                 <Text _dark={{color:"tema.2"}} _light={{color:"tema.3"}} fontSize="3xl" >Area: </Text>
-                <Text _dark={{color:"tema.2"}} _light={{color:"tema.3"}} p="2">Departamento de TIC's</Text>
+                <Text _dark={{color:"tema.2"}} _light={{color:"tema.3"}} p="2"></Text>
+                <Text _dark={{color:"tema.2"}} _light={{color:"tema.3"}} fontSize="3xl" >Plantel: </Text>
+                <Text _dark={{color:"tema.2"}} _light={{color:"tema.3"}} p="2"></Text>
             </Box>
 
             <HStack height="10%" alignItems="center" alignSelf="center" space="1/6">

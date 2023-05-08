@@ -1,8 +1,13 @@
 import React from "react";
+import { useRoute } from "@react-navigation/native";
 import { Box, Button, VStack, Heading, Image, HStack, AlertDialog, Text } from "native-base";
 import { TouchableOpacity } from "react-native";
 
 function MenMaiReq({ navigation }) {
+
+    const route = useRoute();
+    const personaldata_id = route.params?.personaldata_id;
+    console.log(personaldata_id);
 
     const [Info, setIsOpen] = React.useState(false);
     const CloseI = () => setIsOpen(false);
@@ -38,7 +43,7 @@ function MenMaiReq({ navigation }) {
 
             <HStack height="10%" alignItems="center" alignSelf="center" space="10">
 
-                <TouchableOpacity onPress={() => navigation.navigate("profile")}>
+                <TouchableOpacity onPress={() => navigation.navigate("profile", { personaldata_id: personaldata_id })}>
                     <Image size="10" source={require('../assets/U1B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="profile" />
                 </TouchableOpacity>
 

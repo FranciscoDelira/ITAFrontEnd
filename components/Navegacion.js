@@ -36,7 +36,7 @@ function Navegacion () {
             <Stack.Screen name="menwordordapr" component={MenWorOrdApr}/>
             <Stack.Screen name="menworordpen" component={MenWorOrdPen}/>
             <Stack.Screen name="menworordrel" component={MenWorOrdRel}/>
-            <Stack.Screen name="profile" component={Profile}/> 
+            <Stack.Screen name="profile" component={Profile}/>
             <Stack.Screen name="relord" component={RelOrd}/>
             <Stack.Screen name="settings" component={Settings}/> 
             <Stack.Screen name="viemairel" component={VieMaiRel}/>
