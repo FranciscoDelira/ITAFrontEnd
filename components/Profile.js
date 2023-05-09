@@ -1,14 +1,47 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Box, Text, VStack, Heading, Image, HStack, Avatar, AlertDialog, Button} from "native-base";
 import { TouchableOpacity } from "react-native";
-import { useState } from "react";
+
 
 function Profile ({ navigation, route }) {
     const { personaldata_id } = route.params;
-    console.log(personaldata_id);
+    console.log('PersonalData ID:',personaldata_id);
+    const { id } = route.params;
+    console.log('User ID:', id);
 
+    const [personalData, setPersonalData] = useState(null);
+    const [user, setUser] = useState(null);
     const [Exit, setIsOpen1] = React.useState(false);
     const CloseE =() => setIsOpen1(false);
+
+    useEffect(() => {
+        // Función para obtener los datos del personaldata_id
+        const getPersonalData = async () => {
+          try {
+            const response = await fetch(`http://192.168.0.139/ITABackEnd/public/api/personalData_show/${personaldata_id}`);
+            const data = await response.json();
+            setPersonalData(data); // Actualiza el estado con los datos obtenidos
+          } catch (error) {
+            console.log(error);
+          }
+        };
+    
+        getPersonalData(); // Llama a la función para obtener los datos
+      }, [personaldata_id]);
+
+      useEffect(() => {
+        //Función para obtener los datos del usuario
+        const getUser = async () => {
+            try {
+                const response = await fetch(`http://192.168.0.139/ITABackEnd/public/api/user_show/${id}`);
+                const data = await response.json();
+                setUser(data);//Actualiza el estado con los datos obtenidos
+            }catch (error) {
+                console.log(error);
+            }
+        };
+        getUser(); //Llama la función para obtener los datos
+      }, [id]);
 
     
 
@@ -23,15 +56,15 @@ function Profile ({ navigation, route }) {
 
             <Box height="40%" alignSelf="center" p="2">
                 <Text _dark={{color:"tema.2"}} _light={{color:"tema.3"}} fontSize="3xl" >Nombre: </Text>
-                <Text _dark={{color:"tema.2"}} _light={{color:"tema.3"}} p="2"></Text>
+                <Text _dark={{color:"tema.2"}} _light={{color:"tema.3"}} p="2">{personalData?.name}</Text>
                 <Text _dark={{color:"tema.2"}} _light={{color:"tema.3"}} fontSize="3xl" >Apellidos: </Text>
-                <Text _dark={{color:"tema.2"}} _light={{color:"tema.3"}} p="2"></Text>
+                <Text _dark={{color:"tema.2"}} _light={{color:"tema.3"}} p="2">{personalData?.lastname}</Text>
                 <Text _dark={{color:"tema.2"}} _light={{color:"tema.3"}} fontSize="3xl" >Correo: </Text>
-                <Text _dark={{color:"tema.2"}} _light={{color:"tema.3"}} p="2"></Text>
+                <Text _dark={{color:"tema.2"}} _light={{color:"tema.3"}} p="2">{user?.email}</Text>
                 <Text _dark={{color:"tema.2"}} _light={{color:"tema.3"}} fontSize="3xl" >Area: </Text>
-                <Text _dark={{color:"tema.2"}} _light={{color:"tema.3"}} p="2"></Text>
+                <Text _dark={{color:"tema.2"}} _light={{color:"tema.3"}} p="2">{personalData?.area}</Text>
                 <Text _dark={{color:"tema.2"}} _light={{color:"tema.3"}} fontSize="3xl" >Plantel: </Text>
-                <Text _dark={{color:"tema.2"}} _light={{color:"tema.3"}} p="2"></Text>
+                <Text _dark={{color:"tema.2"}} _light={{color:"tema.3"}} p="2">{personalData?.plantel}</Text>
             </Box>
 
             <HStack height="10%" alignItems="center" alignSelf="center" space="1/6">
