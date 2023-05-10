@@ -50,7 +50,7 @@ function Login({ navigation }) {
           navigation.navigate("menmaireq", {personaldata_id: personaldata_id, id: id});
         } else if (response.data.user.role === 'Mantenimiento') {
           console.log('navigation work order');
-          navigation.navigate("menworord");
+          navigation.navigate("menworord", {personaldata_id: personaldata_id, id: id});
         }
         // Limpia los campos de email y password
       handleClear();
