@@ -5,6 +5,12 @@ import { TouchableOpacity } from "react-native";
 
 function MenWorOrd({ navigation }) {
 
+    const route = useRoute();
+    const personaldata_id = route.params?.personaldata_id;
+    console.log('PersonalData ID:',personaldata_id);
+    const id = route.params?.id;
+    console.log('User ID:',id);
+
     const [Exit, setIsOpen1] = React.useState(false);
     const CloseE = () => setIsOpen1(false);
 
