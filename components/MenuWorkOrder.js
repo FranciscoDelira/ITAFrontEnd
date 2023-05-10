@@ -1,8 +1,15 @@
 import React from "react";
+import { useRoute } from "@react-navigation/native";
 import { Box, Button, VStack, Heading, Image, HStack, AlertDialog, Text } from "native-base";
 import { TouchableOpacity } from "react-native";
 
 function MenWorOrd({ navigation }) {
+
+    const route = useRoute();
+    const personaldata_id = route.params?.personaldata_id;
+    console.log('PersonalData ID:',personaldata_id);
+    const id = route.params?.id;
+    console.log('User ID:',id);
 
     const [Exit, setIsOpen1] = React.useState(false);
     const CloseE = () => setIsOpen1(false);
@@ -35,7 +42,7 @@ function MenWorOrd({ navigation }) {
 
             <HStack height="10%" alignItems="center" alignSelf="center" space="10">
 
-                <TouchableOpacity onPress={() => navigation.navigate("profile")}>
+                <TouchableOpacity onPress={() => navigation.navigate("profile", { personaldata_id: personaldata_id, id: id })}>
                     <Image size="10" source={require('../assets/U1B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="profile" />
                 </TouchableOpacity>
 
