@@ -59,7 +59,7 @@ function Profile ({ navigation, route }) {
     return (
         <VStack height="100%" width="100%" space={4} _dark={{bg:"tema.3"}} _light={{bg:"tema.2"}}>
            
-            <Heading height="20%" alignSelf="center" _dark={{color:"tema.2"}} _light={{color:"tema.3"}} fontSize="4xl" marginTop="10%" paddingTop="10%">Perfil de Usuario</Heading>
+            <Heading height="20%" alignSelf="center" _dark={{color:"tema.2"}} _light={{color:"tema.3"}} fontSize="4xl" marginTop="10%">Perfil de Usuario</Heading>
            
             <Avatar height="20%" width="40%" alignSelf="center" source={{
                 uri: "https://www.w3schools.com/css/img_lights.jpg" }}>
