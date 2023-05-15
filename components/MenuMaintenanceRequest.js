@@ -7,9 +7,9 @@ function MenMaiReq({ navigation }) {
 
     const route = useRoute();
     const personaldata_id = route.params?.personaldata_id;
-    console.log('PersonalData ID:',personaldata_id);
+    //console.log('PersonalData ID:',personaldata_id);
     const id = route.params?.id;
-    console.log('User ID:',id);
+    //console.log('User ID:',id);
 
     const [Info, setIsOpen] = React.useState(false);
     const CloseI = () => setIsOpen(false);
