@@ -114,4 +114,4 @@ function Profile ({ navigation, route }) {
         </VStack>
     )
 }
-export default Profile; 
+export default Profile;
