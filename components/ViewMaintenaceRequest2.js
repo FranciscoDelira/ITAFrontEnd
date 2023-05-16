@@ -2,7 +2,7 @@ import React from "react";
 import { VStack, Text, Heading, Image, Box, HStack, AlertDialog, Button, Select, CheckIcon, TextArea } from "native-base";
 import { TouchableOpacity } from "react-native";
 
-function VieMaiReq({navigation}) {
+function VieMaiReq2({navigation}) {
 
     const [Exit, setIsOpen1] = React.useState(false);
     const CloseE = () => setIsOpen1(false);
@@ -129,4 +129,4 @@ function VieMaiReq({navigation}) {
     )
 }
 
-export default VieMaiReq;
+export default VieMaiReq2;
