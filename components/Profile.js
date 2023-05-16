@@ -57,23 +57,28 @@ function Profile ({ navigation, route }) {
       }
 
     return (
-        <VStack height="100%" width="100%" _dark={{bg:"tema.3"}} _light={{bg:"tema.2"}}>
+        <VStack height="100%" width="100%" space={4} _dark={{bg:"tema.3"}} _light={{bg:"tema.2"}}>
            
-            <Heading height="20%" alignSelf="center" _dark={{color:"tema.2"}} _light={{color:"tema.3"}} fontSize="4xl" paddingTop="10%">Perfil de Usuario</Heading>
+            <Heading height="20%" alignSelf="center" _dark={{color:"tema.2"}} _light={{color:"tema.3"}} fontSize="4xl" marginTop="10%">Perfil de Usuario</Heading>
            
-            <Avatar height="20%" width="40%" alignSelf="center" marginTop="-10%" source={{
+            <Avatar height="20%" width="40%" alignSelf="center" source={{
                 uri: "https://www.w3schools.com/css/img_lights.jpg" }}>
             </Avatar>
 
-            <VStack height="40%" alignSelf="center" space={5} marginTop="10%">
-                <Text _dark={{color:"tema.2"}} _light={{color:"tema.3"}} fontSize="2xl" >Nombre: {personalData?.name}</Text>
-                <Text _dark={{color:"tema.2"}} _light={{color:"tema.3"}} fontSize="2xl" >Apellidos: {personalData?.lastname}</Text>
-                <Text _dark={{color:"tema.2"}} _light={{color:"tema.3"}} fontSize="2xl" >Correo: {user?.email}</Text>
-                <Text _dark={{color:"tema.2"}} _light={{color:"tema.3"}} fontSize="2xl" >Area: {personalData?.area}</Text>
-                <Text _dark={{color:"tema.2"}} _light={{color:"tema.3"}} fontSize="2xl" >Plantel: {personalData?.plantel}</Text>
-            </VStack>
+            <Box height="40%" alignSelf="center" p="2">
+                <Text _dark={{color:"tema.2"}} _light={{color:"tema.3"}} fontSize="3xl" >Nombre: </Text>
+                <Text _dark={{color:"tema.2"}} _light={{color:"tema.3"}} p="2">{personalData?.name}</Text>
+                <Text _dark={{color:"tema.2"}} _light={{color:"tema.3"}} fontSize="3xl" >Apellidos: </Text>
+                <Text _dark={{color:"tema.2"}} _light={{color:"tema.3"}} p="2">{personalData?.lastname}</Text>
+                <Text _dark={{color:"tema.2"}} _light={{color:"tema.3"}} fontSize="3xl" >Correo: </Text>
+                <Text _dark={{color:"tema.2"}} _light={{color:"tema.3"}} p="2">{user?.email}</Text>
+                <Text _dark={{color:"tema.2"}} _light={{color:"tema.3"}} fontSize="3xl" >Area: </Text>
+                <Text _dark={{color:"tema.2"}} _light={{color:"tema.3"}} p="2">{personalData?.area}</Text>
+                <Text _dark={{color:"tema.2"}} _light={{color:"tema.3"}} fontSize="3xl" >Plantel: </Text>
+                <Text _dark={{color:"tema.2"}} _light={{color:"tema.3"}} p="2">{personalData?.plantel}</Text>
+            </Box>
 
-            <HStack height="10%" alignItems="center" alignSelf="center" space="1/6" marginTop="20%">    
+            <HStack height="10%" alignItems="center" alignSelf="center" space="1/6">    
               <TouchableOpacity onPress={validateRole}>
                     <Image size="10" source={require('../assets/C1B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="home" />
                 </TouchableOpacity>
