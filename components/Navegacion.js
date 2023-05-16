@@ -18,6 +18,7 @@ import VieMaiRel from "./ViewMaintenanceReleased";
 import VieMaiReq from "./ViewMaintenanceRequest";
 import VieWorOrdApr from "./ViewWorkOrderAprovedRealeased";
 import VieWorOrdPen from "./ViewWorkOrderPending";
+import VieMaiReq2 from "./ViewMaintenaceRequest2";
 
 const Stack = createNativeStackNavigator();
 
@@ -41,6 +42,7 @@ function Navegacion () {
             <Stack.Screen name="settings" component={Settings}/> 
             <Stack.Screen name="viemairel" component={VieMaiRel}/>
             <Stack.Screen name="viemaireq" component={VieMaiReq}/>
+            <Stack.Screen name="viemaireq" component={VieMaiReq2}/>
             <Stack.Screen name="vieworordapr" component={VieWorOrdApr}/>
             <Stack.Screen name="vieworordpen" component={VieWorOrdPen}/>
         </Stack.Navigator>
