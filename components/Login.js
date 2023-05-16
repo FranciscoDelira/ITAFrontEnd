@@ -25,7 +25,7 @@ function Login({ navigation }) {
 
     try {
       const response = await axios.post(
-        'http://192.168.0.139/ITABackEnd/public/api/login',
+        'http://192.168.8.103/ITABackEnd/public/api/login',
         formDataforRequest,
         {
           headers: {
@@ -65,7 +65,7 @@ function Login({ navigation }) {
   return (
     <VStack width="100%" height="100%" _dark={{ bg: "tema.3" }} _light={{ bg: "tema.2" }} alignItems="center">
 
-      <Image width="61.2%" height="32%" marginTop="18%" source={require('../assets/TNM1B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="TecLogo" />
+      <Image resizeMode="contain" width="61.2%" height="32%" marginTop="18%" source={require('../assets/TNM1B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="TecLogo" />
 
       <FormControl width="70%" height="18%" marginTop="10%">
         <Input value={formReact.email} onChangeText={(value) => setFormReact({ ...formReact, email: value })} type="email" _dark={{ bg: "tema.2", color: "tema.3", placeholderTextColor: "tema.3" }} _light={{ bg: "tema.3", color: "tema.2", placeholderTextColor: "tema.2" }} borderColor="tema.1" fontSize="xl" height="50%" _focus={{ bg: "tema.6", borderColor: "tema.1" }} borderRadius={0} borderTopLeftRadius={20} borderTopRightRadius={20} placeholder="Correo Institucional" />
