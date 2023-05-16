@@ -23,7 +23,7 @@ function MenMaiAct({ navigation, route }) {
     const getMaintenanceReq = async () => {
         try {
             const response = await axios.get(
-                `http://192.168.100.94/ITABackEnd/public/api/maintenance_active/${personaldata_id}`,
+                `http://192.168.100.93/ITABackEnd/public/api/maintenance_active/${personaldata_id}`,
               {
                 headers: {
                   'Content-Type': 'multipart/form-data',
@@ -56,7 +56,7 @@ function MenMaiAct({ navigation, route }) {
                     <Text bold fontSize="xs" _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }}>Fecha de solicitud: {requests.requestDate}</Text>
                     <HStack marginTop={"10%"} alignItems="center">
                         <Text bold fontSize="sm" _dark={{ color: "tema.8" }} _light={{ color: "tema.8" }}>{requests.status.toUpperCase()}</Text>
-                        <Button size="9" borderRadius={25} marginLeft={"58%"} variant="unstyled" _pressed={{ bg: 'tema.6' }} onPress={() => navigation.navigate("viemaireq")}>
+                        <Button size="9" borderRadius={25} marginLeft={"58%"} variant="unstyled" _pressed={{ bg: 'tema.6' }} onPress={() => navigation.navigate("viemaireq", {personaldata_id: personaldata_id, id: id, requestId: requests.id})}>
                             <Image size="7" source={require('../assets/PL1N.png')} _dark={{ color: "tema.3", tintColor: "tema.3" }} _light={{ color: "tema.2", tintColor: "tema.2" }} alt="open" />
                         </Button>
                     </HStack>
@@ -67,11 +67,11 @@ function MenMaiAct({ navigation, route }) {
 
             <HStack height="10%" alignItems="center" alignSelf="center" space="10">
 
-                 <TouchableOpacity onPress={() => navigation.navigate("menmaireq")}>
+                 <TouchableOpacity onPress={() => navigation.navigate("menmaireq", {personaldata_id: personaldata_id, id: id})}>
                     <Image size="10" source={require('../assets/C1B.png')} alt="home" />
                 </TouchableOpacity>
                 
-                <TouchableOpacity onPress={() => navigation.navigate("settings")}>
+                <TouchableOpacity onPress={() => navigation.navigate("settings", {personaldata_id: personaldata_id, id: id})}>
                     <Image size="10" source={require('../assets/SE2N.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="password" />
                 </TouchableOpacity>
 
