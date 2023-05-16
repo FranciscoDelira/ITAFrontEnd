@@ -25,7 +25,7 @@ function Login({ navigation }) {
 
     try {
       const response = await axios.post(
-        'http://192.168.0.139/ITABackEnd/public/api/login',
+        'http://192.168.100.93/ITABackEnd/public/api/login',
         formDataforRequest,
         {
           headers: {
