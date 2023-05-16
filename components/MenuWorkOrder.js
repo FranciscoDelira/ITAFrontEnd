@@ -24,17 +24,17 @@ function MenWorOrd({ navigation }) {
             <Box height="55%" w="90%" alignSelf="center">
 
                 <Button _dark={{ bg: "tema.2", color: "tema.3" }} _light={{ bg: "tema.3", color: "tema.2" }} _pressed={{bg:'tema.6'}} borderRadius="xl" h="32"
-                onPress={() => navigation.navigate("menworordpen")}>
+                onPress={() => navigation.navigate("menworordpen",{personaldata_id: personaldata_id, id: id})}>
                     <Text textAlign="center" fontSize="3xl" _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }}>Órdenes de Trabajo Pendientes</Text>
                 </Button>
 
                 <Button _dark={{ bg: "tema.2", color: "tema.3" }} _light={{ bg: "tema.3", color: "tema.2" }} _pressed={{bg:'tema.6'}} borderRadius="xl" h="32" 
-                onPress={() => navigation.navigate("menwordordapr") } marginTop="5%" _text={{ fontSize: "3xl" }}>
+                onPress={() => navigation.navigate("menwordordapr",{personaldata_id: personaldata_id, id: id}) } marginTop="5%" _text={{ fontSize: "3xl" }}>
                     <Text textAlign="center" fontSize="3xl" _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }}>Órdenes de Trabajo Aprobadas</Text>
                 </Button>
 
                 <Button _dark={{ bg: "tema.2", color: "tema.3" }} _light={{ bg: "tema.3", color: "tema.2" }} _pressed={{bg:'tema.6'}} borderRadius="xl" h="32" 
-                onPress={() => navigation.navigate("menworordrel")}marginTop="5%" _text={{ fontSize: "3xl" }}>
+                onPress={() => navigation.navigate("menworordrel",{personaldata_id: personaldata_id, id: id})}marginTop="5%" _text={{ fontSize: "3xl" }}>
                     <Text textAlign="center" fontSize="3xl" _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }}>Órdenes de Trabajo Liberadas</Text>
                 </Button>
 

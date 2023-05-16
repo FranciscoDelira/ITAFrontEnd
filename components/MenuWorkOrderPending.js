@@ -2,7 +2,13 @@ import React from "react";
 import { Box, Button, VStack, Heading, Image, HStack, AlertDialog, Text } from "native-base";
 import { TouchableOpacity } from "react-native";
 
-function MenWorOrdPen({ navigation }) {
+function MenWorOrdPen({ navigation, route }) {
+
+    /* recibe los parametros del id del user y del personal data */
+    const { personaldata_id } = route.params;
+    //console.log('PersonalData ID:',personaldata_id);
+    const { id } = route.params;
+    //console.log('User ID:', id);
 
     const [Exit, setIsOpen1] = React.useState(false);
     const CloseE = () => setIsOpen1(false);

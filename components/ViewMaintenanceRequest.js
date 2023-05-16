@@ -27,7 +27,7 @@ function VieMaiReq({navigation, route}) {
         //Función para obtener los datos de la solicitud
         const getMaintenanceReq = async () => {
             try{
-                const response = await fetch(`http://192.168.100.93/ITABackEnd/public/api/maintenance_show/${requestId}`);
+                const response = await fetch(`http://192.168.8.103/ITABackEnd/public/api/maintenance_show/${requestId}`);
                 const data = await response.json();
                 setRequestMaintenance(data);
             }catch (error) {
@@ -55,7 +55,7 @@ function VieMaiReq({navigation, route}) {
                     {requestMaintenance?.evidence1 && (
                         <Image
                         source={{
-                            uri: `http://192.168.100.93/ITABackEnd/storage/app/${requestMaintenance?.evidence1}`,
+                            uri: `http://192.168.0.139/ITABackEnd/storage/app/${requestMaintenance?.evidence1}`,
                           }}
                             alt="image1"
                             size="md"
@@ -65,7 +65,7 @@ function VieMaiReq({navigation, route}) {
                     {requestMaintenance?.evidence2 && (
                         <Image
                         source={{
-                            uri: `http://192.168.100.93/ITABackEnd/storage/app/${requestMaintenance?.evidence2}`,
+                            uri: `http://192.168.0.139/ITABackEnd/storage/app/${requestMaintenance?.evidence2}`,
                           }}
                             alt="image2"
                             size="md"
@@ -75,7 +75,7 @@ function VieMaiReq({navigation, route}) {
                     {requestMaintenance?.evidence3 && (
                         <Image
                         source={{
-                            uri: `http://192.168.100.93/ITABackEnd/storage/app/${requestMaintenance?.evidence3}`,
+                            uri: `http://192.168.0.139/ITABackEnd/storage/app/${requestMaintenance?.evidence3}`,
                           }}
                             alt="image3"
                             size="md"

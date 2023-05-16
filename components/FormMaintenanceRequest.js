@@ -149,7 +149,7 @@ function ForMaiReq({ navigation }) {
 
         try {
             const response = await axios.post(
-                'http://192.168.100.93/ITABackEnd/public/api/maintenance_store',
+                'http://192.168.8.103/ITABackEnd/public/api/maintenance_store',
                 formData,
                 {
                     headers: {
@@ -194,8 +194,6 @@ function ForMaiReq({ navigation }) {
             <Heading _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} textAlign="center" height="15%" alignSelf="center" fontSize="3xl" paddingTop="10%">Solicitud de Mantenimiento Correctivo</Heading>
 
             <Box height="70%" w="90%" alignSelf="center">
-
-                <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} alignSelf="flex-end" fontSize="md">Folio: 001</Text>
 
                 <View>
                     <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="md" marginTop="3%">Fecha de mantenimiento:
