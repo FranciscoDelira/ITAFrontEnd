@@ -67,7 +67,7 @@ function MenMaiReq({ navigation }) {
                     </AlertDialog>
                 </TouchableOpacity>
 
-                <TouchableOpacity onPress={() => navigation.navigate("settings")}>
+                <TouchableOpacity onPress={() => navigation.navigate("settings",{personaldata_id: personaldata_id, id: id})}>
                     <Image size="10" source={require('../assets/SE2B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="settings" />
                 </TouchableOpacity>
 

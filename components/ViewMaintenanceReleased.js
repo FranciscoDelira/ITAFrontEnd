@@ -30,7 +30,7 @@ function VieMaiRel({navigation, route}){
         //Función para obtener los datos de la solicitud
         const getMaintenanceReq = async () => {
             try{
-                const response = await fetch(`http://192.168.8.103/ITABackEnd/public/api/showCombinedData/${requestId}`);
+                const response = await fetch(`http://10.0.9.8/ITABackEnd/public/api/showCombinedData/${requestId}`);
                 const data = await response.json();
                 setRequestMaintenance(data);
                 console.log(data);
