@@ -23,24 +23,45 @@ function MenMaiAct({ navigation, route }) {
     const getMaintenanceReq = async () => {
         try {
             const response = await axios.get(
-                `http://192.168.8.103/ITABackEnd/public/api/maintenance_active/${personaldata_id}`,
-              {
-                headers: {
-                  'Content-Type': 'multipart/form-data',
-                  "Access-Control-Allow-Origin": "*"
+                `http://10.0.9.7/ITABackEnd/public/api/maintenance_active/${personaldata_id}`,
+                {
+                    headers: {
+                        'Content-Type': 'multipart/form-data',
+                        "Access-Control-Allow-Origin": "*"
+                    }
                 }
-              }
             );
-            
-                setMaintenanceR(response.data);
-            
-            
-        }catch (error) {
+
+            setMaintenanceR(response.data);
+
+
+        } catch (error) {
             console.log(error);
-          }
+        }
     }
 
-    
+    const onSubmit = async ($id) => {
+        try {
+            const response = await axios.get(
+                `http://10.0.9.7/ITABackEnd/public/api/maintenance_show/${$id}`,
+                {
+                    headers: {
+                        'Content-Type': 'multipart/form-data',
+                        "Access-Control-Allow-Origin": "*"
+                    }
+                }
+            );
+
+            
+            if (response.data.status === 'Pendiente') {
+                navigation.navigate("viemaireq", {personaldata_id: personaldata_id, id: id, requestId: response.data.id});
+            } else if (response.data.status === 'Por liberar') {
+                navigation.navigate("viemaireq2", { personaldata_id: personaldata_id, id: id, requestId: response.data.id });
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    }
 
     return (
         <VStack height="100%" width="100%" space={4} _dark={{ bg: "tema.3" }} _light={{ bg: "tema.2" }}>
@@ -52,27 +73,27 @@ function MenMaiAct({ navigation, route }) {
             <Box height="55%" w="90%" alignSelf="center" >
                 {maintenanceR.map((requests) => (
                     <Box _dark={{ bg: "tema.2", color: "tema.3" }} _light={{ bg: "tema.3", color: "tema.2" }} _pressed={{ bg: 'tema.6' }} borderRadius="xl" height={"32%"} marginBottom="5%" padding={"3%"} key={requests.id}>
-                    <Text bold fontSize="xs" _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }} >Folio: {requests.id} </Text>
-                    <Text bold fontSize="xs" _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }}>Fecha de solicitud: {requests.requestDate}</Text>
-                    <HStack marginTop={"10%"} alignItems="center">
-                        <Text bold fontSize="sm" _dark={{ color: "tema.8" }} _light={{ color: "tema.8" }}>{requests.status.toUpperCase()}</Text>
-                        <Button size="9" borderRadius={25} marginLeft={"58%"} variant="unstyled" _pressed={{ bg: 'tema.6' }} onPress={() => navigation.navigate("viemaireq", {personaldata_id: personaldata_id, id: id, requestId: requests.id})}>
-                            <Image size="7" source={require('../assets/PL1N.png')} _dark={{ color: "tema.3", tintColor: "tema.3" }} _light={{ color: "tema.2", tintColor: "tema.2" }} alt="open" />
-                        </Button>
-                    </HStack>
-                </Box>
+                        <Text bold fontSize="xs" _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }} >Folio: {requests.id} </Text>
+                        <Text bold fontSize="xs" _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }}>Fecha de solicitud: {requests.requestDate}</Text>
+                        <HStack marginTop={"10%"} alignItems="center">
+                            <Text bold fontSize="sm" _dark={{ color: "tema.8" }} _light={{ color: "tema.8" }}>{requests.status.toUpperCase()}</Text>
+                            <Button size="9" borderRadius={25} marginLeft={"58%"} variant="unstyled" _pressed={{ bg: 'tema.6' }} onPress={() => onSubmit(requests.id)}>
+                                <Image size="7" source={require('../assets/PL1N.png')} _dark={{ color: "tema.3", tintColor: "tema.3" }} _light={{ color: "tema.2", tintColor: "tema.2" }} alt="open" />
+                            </Button>
+                        </HStack>
+                    </Box>
                 ))}
-                
+
             </Box>
 
             <HStack height="10%" alignItems="center" alignSelf="center" space="10">
 
-                 <TouchableOpacity onPress={() => navigation.navigate("menmaireq", {personaldata_id: personaldata_id, id: id})}>
+                <TouchableOpacity onPress={() => navigation.navigate("menmaireq", { personaldata_id: personaldata_id, id: id })}>
                     <Image size="10" source={require('../assets/C1B.png')} alt="home" />
                 </TouchableOpacity>
-                
-                <TouchableOpacity onPress={() => navigation.navigate("settings", {personaldata_id: personaldata_id, id: id})}>
-                    <Image size="10" source={require('../assets/SE2N.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="password" />
+
+                <TouchableOpacity onPress={() => navigation.navigate("settings", {personaldata_id: personaldata_id, id: id })}>
+                    <Image size="10" source={require('../assets/SE2N.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="settings" />
                 </TouchableOpacity>
 
                 <TouchableOpacity onPress={() => setIsOpen1(!Exit)}>
