@@ -23,7 +23,7 @@ function MenMaiAct({ navigation, route }) {
     const getMaintenanceReq = async () => {
         try {
             const response = await axios.get(
-                `http://10.0.9.8/ITABackEnd/public/api/maintenance_active/${personaldata_id}`,
+                `http://192.168.100.96/ITABackEnd/public/api/maintenance_active/${personaldata_id}`,
               {
                 headers: {
                   'Content-Type': 'multipart/form-data',

@@ -18,7 +18,7 @@ function Settings({ navigation, route }) {
         // Función para obtener los datos del personaldata_id
         const getPersonalData = async () => {
           try {
-            const response = await fetch(`http://10.0.9.8/ITABackEnd/public/api/personalData_show/${personaldata_id}`);
+            const response = await fetch(`http://192.168.100.96/ITABackEnd/public/api/personalData_show/${personaldata_id}`);
             const data = await response.json();
             setPersonalData(data); // Actualiza el estado con los datos obtenidos
           } catch (error) {
@@ -33,7 +33,7 @@ function Settings({ navigation, route }) {
         //Función para obtener los datos del usuario
         const getUser = async () => {
             try {
-                const response = await fetch(`http://10.0.9.8/ITABackEnd/public/api/user_show/${id}`);
+                const response = await fetch(`http://192.168.100.96/ITABackEnd/public/api/user_show/${id}`);
                 const data = await response.json();
                 setUser(data);//Actualiza el estado con los datos obtenidos
             }catch (error) {
@@ -68,7 +68,7 @@ function Settings({ navigation, route }) {
             <Box height="53%" width={"95%"} alignSelf="center" p="3"  >
                 <HStack alignItems="center" marginBottom="8">
                     <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="xl" >Cambiar contraseña</Text>
-                    <Button size="7" borderRadius={10} marginLeft={"30%"} variant="unstyled" _pressed={{ bg: 'tema.6' }} onPress={() => navigation.navigate("password")}>
+                    <Button size="7" borderRadius={10} marginLeft={"30%"} variant="unstyled" _pressed={{ bg: 'tema.6' }} onPress={() => navigation.navigate("password", {personaldata_id: personaldata_id, id: id}, {personaldata_id: personaldata_id, id:id})}>
                         <Image size="6" source={require('../assets/F1B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="open" />
                     </Button>
                 </HStack>
