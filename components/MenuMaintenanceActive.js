@@ -23,13 +23,13 @@ function MenMaiAct({ navigation, route }) {
     const getMaintenanceReq = async () => {
         try {
             const response = await axios.get(
-                `http://10.0.9.7/ITABackEnd/public/api/maintenance_active/${personaldata_id}`,
-                {
-                    headers: {
-                        'Content-Type': 'multipart/form-data',
-                        "Access-Control-Allow-Origin": "*"
-                    }
+                `http://10.0.9.8/ITABackEnd/public/api/maintenance_active/${personaldata_id}`,
+              {
+                headers: {
+                  'Content-Type': 'multipart/form-data',
+                  "Access-Control-Allow-Origin": "*"
                 }
+              }
             );
 
             setMaintenanceR(response.data);
