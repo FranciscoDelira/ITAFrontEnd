@@ -43,7 +43,7 @@ function MenMaiAct({ navigation, route }) {
     const onSubmit = async ($id) => {
         try {
             const response = await axios.get(
-                `http://10.0.9.7/ITABackEnd/public/api/maintenance_show/${$id}`,
+                `http://192.168.100.96/ITABackEnd/public/api/maintenance_show/${$id}`,
                 {
                     headers: {
                         'Content-Type': 'multipart/form-data',

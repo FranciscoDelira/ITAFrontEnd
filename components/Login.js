@@ -40,16 +40,16 @@ function Login({ navigation }) {
       //Valida si el usuario esta registrado
       if (response.data.status === 200) {
         const personaldata_id = response.data.personaldata_id; //Obtener el ID de personaldata desde la respuesta
-        console.log('PersonalData ID:',personaldata_id);
+        //console.log('PersonalData ID:',personaldata_id);
         const id = response.data.id;
-        console.log('User ID:',id);
+        //console.log('User ID:',id);
         
         //valida el rol del usuario ingresado
         if (response.data.user.role === 'Jefe Departamento') {
-          console.log('navigation maintenance request');
+          //console.log('navigation maintenance request');
           navigation.navigate("menmaireq", {personaldata_id: personaldata_id, id: id});
         } else if (response.data.user.role === 'Mantenimiento') {
-          console.log('navigation work order');
+          //console.log('navigation work order');
           navigation.navigate("menworord", {personaldata_id: personaldata_id, id: id}, {personaldata_id: personaldata_id, id:id});
         }
         // Limpia los campos de email y password

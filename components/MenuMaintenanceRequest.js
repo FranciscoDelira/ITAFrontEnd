@@ -7,9 +7,10 @@ function MenMaiReq({ navigation }) {
 
     const route = useRoute();
     const personaldata_id = route.params?.personaldata_id;
-    //console.log('PersonalData ID:',personaldata_id);
+    console.log('Menu maintenance request')
+    console.log('PersonalData ID:',personaldata_id);
     const id = route.params?.id;
-    //console.log('User ID:',id);
+    console.log('User ID:',id);
 
     const [Info, setIsOpen] = React.useState(false);
     const CloseI = () => setIsOpen(false);
@@ -67,7 +68,7 @@ function MenMaiReq({ navigation }) {
                     </AlertDialog>
                 </TouchableOpacity>
 
-                <TouchableOpacity onPress={() => navigation.navigate("settings")}>
+                <TouchableOpacity onPress={() => navigation.navigate("settings",{personaldata_id: personaldata_id, id: id})}>
                     <Image size="10" source={require('../assets/SE2B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="settings" />
                 </TouchableOpacity>
 

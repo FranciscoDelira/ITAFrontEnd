@@ -6,6 +6,7 @@ import { TouchableOpacity } from "react-native";
 
 function Profile ({ navigation, route }) {
     const { personaldata_id } = route.params;
+    console.log('Profile')
     console.log('PersonalData ID:',personaldata_id);
     const { id } = route.params;
     console.log('User ID:', id);
@@ -48,10 +49,8 @@ function Profile ({ navigation, route }) {
 
       const validateRole = async () => {
         if (user?.role === 'Jefe Departamento') {
-            console.log('navigation maintenance request');
             navigation.navigate("menmaireq", {personaldata_id: personaldata_id, id: id});
           } else if (user?.role === 'Mantenimiento') {
-            console.log('navigation work order');
             navigation.navigate("menworord", {personaldata_id: personaldata_id, id: id}, {personaldata_id: personaldata_id, id:id});
           }
       }

@@ -7,6 +7,7 @@ function MenWorOrd({ navigation }) {
 
     const route = useRoute();
     const personaldata_id = route.params?.personaldata_id;
+    console.log('Menu Work Order')
     console.log('PersonalData ID:',personaldata_id);
     const id = route.params?.id;
     console.log('User ID:',id);
@@ -46,7 +47,7 @@ function MenWorOrd({ navigation }) {
                     <Image size="10" source={require('../assets/U1B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="profile" />
                 </TouchableOpacity>
 
-                <TouchableOpacity onPress={() => navigation.navigate("settings")}>
+                <TouchableOpacity onPress={() => navigation.navigate("settings", { personaldata_id: personaldata_id, id: id })}>
                     <Image size="10" source={require('../assets/SE2B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="settings" />
                 </TouchableOpacity>
 

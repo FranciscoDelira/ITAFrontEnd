@@ -1,10 +1,17 @@
 import React, { useState } from "react";
-import { VStack, Text, Image, Box, HStack, AlertDialog, Button, Input } from "native-base";
+import { VStack, Text, Image, Box, HStack, AlertDialog, Button, Input,Heading } from "native-base";
 import DatePicker, { getFormatedDate } from "react-native-modern-datepicker";
 import { View, Modal, TouchableOpacity } from "react-native";
 import { launchImageLibrary } from "react-native-image-picker";
 
-function VieWorOrdApr({ navigation }) {
+function VieWorOrdApr({ navigation, route }) {
+    /* recibe los parametros del id del user y del personal data */
+    const { personaldata_id } = route.params;
+    console.log('View Work order Aproved Released')
+    console.log('PersonalData ID:', personaldata_id);
+    const { id } = route.params;
+    console.log('User ID:', id);
+
     //Estados para abrir y cerrar alerts
     const [Exit, setIsOpen1] = React.useState(false);
     const CloseE = () => setIsOpen1(false);
@@ -154,11 +161,11 @@ function VieWorOrdApr({ navigation }) {
 
             <HStack height="10%" alignItems="center" alignSelf="center" space="10">
 
-                <TouchableOpacity onPress={() => navigation.navigate("menworord")}>
+                <TouchableOpacity onPress={() => navigation.navigate("menworord",{ personaldata_id: personaldata_id, id: id })}>
                     <Image size="10" source={require('../assets/C1B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="profile" />
                 </TouchableOpacity>
 
-                <TouchableOpacity onPress={() => navigation.navigate("settings")}>
+                <TouchableOpacity onPress={() => navigation.navigate("settings",{ personaldata_id: personaldata_id, id: id })}>
                     <Image size="10" source={require('../assets/SE2B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="settings" />
                 </TouchableOpacity>
 

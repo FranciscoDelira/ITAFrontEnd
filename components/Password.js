@@ -5,6 +5,7 @@ import { TouchableOpacity } from "react-native";
 function Password({ navigation, route }) {
 
 const { personaldata_id } = route.params;
+console.log('Password')
 console.log('PersonalData ID:', personaldata_id);
 const { id } = route.params;
 console.log('User ID:', id);
@@ -61,10 +62,10 @@ useEffect(() => {
                 <Input _dark={{ bg: "tema.2", color: "tema.3", placeholderTextColor: "tema.3" }} _light={{ bg: "tema.3", color: "tema.2", placeholderTextColor: "tema.2" }} borderColor="tema.1" fontSize="md" _focus={{ bg: "tema.6", borderColor: "tema.1" }} placeholder="Confirme su nueva contraseña" p="2" />
 
                 <Button.Group marginTop={"5%"}>
-                    <Button borderRadius="10" _pressed={{ bg: 'tema.6' }} _dark={{ bg: "tema.2" }} _light={{ bg: "tema.3" }} onPress={() => navigation.navigate("settings")}>
+                    <Button borderRadius="10" _pressed={{ bg: 'tema.6' }} _dark={{ bg: "tema.2" }} _light={{ bg: "tema.3" }} onPress={() => navigation.navigate("settings",{ personaldata_id: personaldata_id, id: id })}>
                         <Text _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }}>Confirmar</Text>
                     </Button>
-                    <Button borderRadius="10" _pressed={{ bg: 'tema.6' }} _dark={{ bg: "tema.2" }} _light={{ bg: "tema.3" }} onPress={() => navigation.navigate("settings", { personaldata_id: personaldata_id, id: id }, { personaldata_id: personaldata_id, id: id })}>
+                    <Button borderRadius="10" _pressed={{ bg: 'tema.6' }} _dark={{ bg: "tema.2" }} _light={{ bg: "tema.3" }} onPress={() => navigation.navigate("settings", { personaldata_id: personaldata_id, id: id })}>
                         <Text _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }}>Cancelar</Text>
                     </Button>
                 </Button.Group>
