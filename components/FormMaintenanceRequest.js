@@ -149,7 +149,7 @@ function ForMaiReq({ navigation }) {
 
         try {
             const response = await axios.post(
-                'http://192.168.8.103/ITABackEnd/public/api/maintenance_store',
+                'http://192.168.100.167/ITABackEnd/public/api/maintenance_store',
                 formData,
                 {
                     headers: {
@@ -285,8 +285,8 @@ function ForMaiReq({ navigation }) {
                 </Button>
 
                 <Button marginTop="3%" rounded="lg" w="40%" alignSelf="center" _pressed={{ bg: 'tema.6' }} _dark={{ bg: "tema.2" }} _light={{ bg: "tema.3" }} onPress={() => { handleClear(); navigation.navigate("menmaireq", { personaldata_id: personaldata_id, id: id }) }}>
-                    <Text _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }}>Cancelar</Text></Button>
-
+                    <Text _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }}>Cancelar</Text>
+                </Button>
             </Box>
 
             <HStack height="10%" alignItems="center" alignSelf="center" space="10">
@@ -340,7 +340,6 @@ function ForMaiReq({ navigation }) {
                 </TouchableOpacity>
 
             </HStack>
-
 
         </VStack>
     )

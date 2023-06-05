@@ -30,7 +30,7 @@ function VieMaiRel({navigation, route}){
         //Función para obtener los datos de la solicitud
         const getMaintenanceReq = async () => {
             try{
-                const response = await fetch(`http://192.168.100.96/ITABackEnd/public/api/showCombinedData/${requestId}`);
+                const response = await fetch(`http://192.168.100.167/ITABackEnd/public/api/showCombinedData/${requestId}`);
                 const data = await response.json();
                 setRequestMaintenance(data);
                 console.log(data);
@@ -57,7 +57,7 @@ function VieMaiRel({navigation, route}){
                     {requestMaintenance?.MR_Evidence1 && (
                         <Image
                         source={{
-                            uri: `http://192.168.100.96/ITABackEnd/storage/app/${requestMaintenance?.MR_Evidence1}`,
+                            uri: `http://192.168.100.167/ITABackEnd/storage/app/${requestMaintenance?.MR_Evidence1}`,
                           }}
                             alt="image1"
                             size="md"
@@ -67,7 +67,7 @@ function VieMaiRel({navigation, route}){
                     {requestMaintenance?.MR_Evidence2 && (
                         <Image
                         source={{
-                            uri: `http://192.168.100.96/ITABackEnd/storage/app/${requestMaintenance?.MR_Evidence2}`,
+                            uri: `http://192.168.100.167/ITABackEnd/storage/app/${requestMaintenance?.MR_Evidence2}`,
                           }}
                             alt="image2"
                             size="md"
@@ -77,7 +77,7 @@ function VieMaiRel({navigation, route}){
                     {requestMaintenance?.MR_Evidence3 && (
                         <Image
                         source={{
-                            uri: `http://192.168.100.96/ITABackEnd/storage/app/${requestMaintenance?.MR_Evidence3}`,
+                            uri: `http://192.168.100.167/ITABackEnd/storage/app/${requestMaintenance?.MR_Evidence3}`,
                           }}
                             alt="image3"
                             size="md"
@@ -92,7 +92,7 @@ function VieMaiRel({navigation, route}){
                     {requestMaintenance?.WO_Evidence1 && (
                         <Image
                         source={{
-                            uri: `http://192.168.100.96/ITABackEnd/storage/app/${requestMaintenance?.WO_Evidence1}`,
+                            uri: `http://192.168.100.167/ITABackEnd/storage/app/${requestMaintenance?.WO_Evidence1}`,
                           }}
                             alt="image1"
                             size="md"
@@ -102,7 +102,7 @@ function VieMaiRel({navigation, route}){
                     {requestMaintenance?.WO_Evidence2 && (
                         <Image
                         source={{
-                            uri: `http://192.168.100.96/ITABackEnd/storage/app/${requestMaintenance?.WO_Evidence2}`,
+                            uri: `http://192.168.100.167/ITABackEnd/storage/app/${requestMaintenance?.WO_Evidence2}`,
                           }}
                             alt="image2"
                             size="md"
@@ -112,7 +112,7 @@ function VieMaiRel({navigation, route}){
                     {requestMaintenance?.WO_Evidence3 && (
                         <Image
                         source={{
-                            uri: `http://192.168.100.96/ITABackEnd/storage/app/${requestMaintenance?.WO_Evidence3}`,
+                            uri: `http://192.168.100.167/ITABackEnd/storage/app/${requestMaintenance?.WO_Evidence3}`,
                           }}
                             alt="image3"
                             size="md"

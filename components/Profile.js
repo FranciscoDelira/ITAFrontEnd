@@ -22,7 +22,7 @@ function Profile ({ navigation, route }) {
         // Función para obtener los datos del personaldata_id
         const getPersonalData = async () => {
           try {
-            const response = await fetch(`http://192.168.100.96/ITABackEnd/public/api/personalData_show/${personaldata_id}`);
+            const response = await fetch(`http://192.168.100.167/ITABackEnd/public/api/personalData_show/${personaldata_id}`);
             const data = await response.json();
             setPersonalData(data); // Actualiza el estado con los datos obtenidos
           } catch (error) {
@@ -37,7 +37,7 @@ function Profile ({ navigation, route }) {
         //Función para obtener los datos del usuario
         const getUser = async () => {
             try {
-                const response = await fetch(`http://192.168.100.96/ITABackEnd/public/api/user_show/${id}`);
+                const response = await fetch(`http://192.168.100.167/ITABackEnd/public/api/user_show/${id}`);
                 const data = await response.json();
                 setUser(data);//Actualiza el estado con los datos obtenidos
             }catch (error) {
