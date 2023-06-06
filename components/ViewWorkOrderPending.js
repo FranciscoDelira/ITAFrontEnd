@@ -4,6 +4,13 @@ import { TouchableOpacity } from "react-native";
 
 function VieWorOrdPen({ navigation, route }){
 
+    /* recibe los parametros del id del user y del personal data */
+    const { personaldata_id } = route.params;
+    console.log('View Work order pending')
+    console.log('PersonalData ID:', personaldata_id);
+    const { id } = route.params;
+    console.log('User ID:', id);
+
     const [Exit, setIsOpen1] = React.useState(false);
     const CloseE = () => setIsOpen1(false);    
     
@@ -32,12 +39,13 @@ function VieWorOrdPen({ navigation, route }){
             </Box>
 
             <HStack height="12%" margin={0} alignItems="center" alignSelf="center" space="10">
-                <TouchableOpacity onPress={() => navigation.navigate("menworord")}>
+               
+                 <TouchableOpacity onPress={() => navigation.navigate("menworord",{ personaldata_id: personaldata_id, id: id })}>
                     <Image size="10" source={require('../assets/C1B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="home" />
                 </TouchableOpacity>
 
-                <TouchableOpacity>
-                    <Image size="10" source={require('../assets/P1B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="info" />
+                <TouchableOpacity onPress={() => navigation.navigate("settings",{ personaldata_id: personaldata_id, id: id })}>
+                    <Image size="10" source={require('../assets/SE2B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="settings" />
                 </TouchableOpacity>
 
                 <TouchableOpacity onPress={() => setIsOpen1(!Exit)}>
