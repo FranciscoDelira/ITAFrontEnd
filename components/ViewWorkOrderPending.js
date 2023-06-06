@@ -33,9 +33,10 @@ function VieWorOrdPen({ navigation, route }){
                     <Image size="12" source={require('../assets/Image.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="Add image" />
                 </HStack>
                 
-                <Button alignSelf={'center'} marginTop="5%" _pressed={{ bg: 'tema.6' }} width="40%" borderRadius={"20"} _dark={{ bg: "tema.2" }} _light={{ bg: "tema.3" }} onPress={() => navigation.navigate("forworord")}>
+                <Button alignSelf={'center'} marginTop="5%" _pressed={{ bg: 'tema.6' }} width="40%" borderRadius={"20"} _dark={{ bg: "tema.2" }} _light={{ bg: "tema.3" }} onPress={() => navigation.navigate("forworord",{ personaldata_id: personaldata_id, id: id })}>
                     <Text _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }} >Terminar Orden</Text>
                 </Button>
+                
             </Box>
 
             <HStack height="12%" margin={0} alignItems="center" alignSelf="center" space="10">

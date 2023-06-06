@@ -30,7 +30,13 @@ function VieMaiRel({navigation, route}){
         //Función para obtener los datos de la solicitud
         const getMaintenanceReq = async () => {
             try{
-                const response = await fetch(`http://192.168.100.96/ITABackEnd/public/api/showCombinedData/${requestId}`);
+                const response = await fetch(`http://192.168.100.94/ITABackEnd/public/api/showCombinedData/${requestId}`,
+                {
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    }
+                  });
                 const data = await response.json();
                 setRequestMaintenance(data);
                 console.log(data);
@@ -41,7 +47,6 @@ function VieMaiRel({navigation, route}){
 
         getMaintenanceReq();
     }, [requestId]);
-
 
     return(
         <VStack height="100%" width="100%" space={4} _dark={{bg:"tema.3"}} _light={{bg:"tema.2"}}>
@@ -85,7 +90,8 @@ function VieMaiRel({navigation, route}){
                     )}
                 </HStack>
 
-                <Text _dark={{color: "tema.2"}} _light={{color: "tema.3"}} fontSize="md" marginTop="3%"><Text bold fontSize={'xl'}>Asignado A: </Text> {requestMaintenance?.employeeName}</Text>
+                {/* MOSTRAR EL NOMBRE DEL EMPLEADO EN LUGAR DEL ID */}
+                <Text _dark={{color: "tema.2"}} _light={{color: "tema.3"}} fontSize="md"><Text bold fontSize={'xl'}>Asignado A: </Text> {requestMaintenance?.personaldata_id}</Text>
                 <Text _dark={{color: "tema.2"}} _light={{color: "tema.3"}} fontSize="md" marginTop="3%"><Text bold fontSize={'xl'}>Fecha de Realización: </Text> {requestMaintenance?.maintenanceDate}</Text>
                 <Text _dark={{color: "tema.2"}} _light={{color: "tema.3"}} fontSize="md" marginTop="3%"><Text bold fontSize={'xl'}>Trabajo Realizado: </Text>  {requestMaintenance?.jobDescription}</Text>
                 <Text _dark={{color: "tema.2"}} _light={{color: "tema.3"}} fontSize="xl" bold marginTop="3%">Evidencia de Trabajo: </Text>

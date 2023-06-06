@@ -57,7 +57,7 @@ function ForMaiReq({ navigation }) {
 
     //Estados para seleccionar fecha
     const today = new Date();
-    const startDate = getFormatedDate(today.setDate(today.getDate() + 1), 'DD/MM/YYYY');
+    const startDate = getFormatedDate(today.setDate(today.getDate() + 1), 'MM/DD/YYYY');
 
     const [openM, setOpenM] = useState(false); //abrir y cerrar modal
     const [date, setDate] = useState('Seleccionar'); //variable de fecha
