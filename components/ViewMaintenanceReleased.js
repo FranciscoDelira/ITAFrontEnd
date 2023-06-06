@@ -1,5 +1,5 @@
 import React from "react";
-import { VStack, Text, Heading, Image, Box, HStack, AlertDialog, Button, Select, CheckIcon, TextArea } from "native-base";
+import { VStack, Text, Heading, Image, Box, HStack, AlertDialog, Button, TextArea } from "native-base";
 import { TouchableOpacity } from "react-native";
 import { useState } from "react";
 import { useEffect } from "react";
@@ -30,7 +30,7 @@ function VieMaiRel({navigation, route}){
         //Función para obtener los datos de la solicitud
         const getMaintenanceReq = async () => {
             try{
-                const response = await fetch(`http://192.168.100.167/ITABackEnd/public/api/showCombinedData/${requestId}`);
+                const response = await fetch(`http://192.168.100.96/ITABackEnd/public/api/showCombinedData/${requestId}`);
                 const data = await response.json();
                 setRequestMaintenance(data);
                 console.log(data);
@@ -49,16 +49,16 @@ function VieMaiRel({navigation, route}){
 
             <Box height="70%" w="90%" alignSelf="center">
                 <Text _dark={{color: "tema.2"}} _light={{color: "tema.3"}} alignSelf="flex-end" fontSize="md"><Text fontSize={'xl'} bold>Folio:</Text> {requestMaintenance?.id}</Text>
-                <Text _dark={{color: "tema.2"}} _light={{color: "tema.3"}} fontSize="md" marginTop="3%"> <Text bold fontSize={'xl'}>Fecha:</Text> {requestMaintenance?.requestDate}</Text>
-                <Text _dark={{color: "tema.2"}} _light={{color: "tema.3"}} fontSize="xl" bold>Descripción: </Text>
-                <TextArea _dark={{ color: "tema.2", borderColor: "tema.2" }} _light={{ color: "tema.3", borderColor: "tema.2" }} fontSize="md">{requestMaintenance?.requestDescription}</TextArea>
+                <Text _dark={{color: "tema.2"}} _light={{color: "tema.3"}} fontSize="md" marginTop="3%"> <Text bold fontSize={'xl'} marginTop="3%">Fecha:</Text> {requestMaintenance?.requestDate}</Text>
+                <Text _dark={{color: "tema.2"}} _light={{color: "tema.3"}} fontSize="xl" bold marginTop="3%">Descripción: </Text>
+                <TextArea _dark={{ color: "tema.2", borderColor: "tema.2" }} _light={{ color: "tema.3", borderColor: "tema.2" }} fontSize="md" marginTop="3%">{requestMaintenance?.requestDescription}</TextArea>
                 <Text _dark={{color: "tema.2"}} _light={{color: "tema.3"}} fontSize="xl" bold>Evidencia: </Text>
-                    <HStack justifyContent={"center"}>
+                <HStack space={4} marginTop="3%" justifyContent={"center"}>
                     {requestMaintenance?.MR_Evidence1 && (
                         <Image
                         source={{
-                            uri: `http://192.168.100.167/ITABackEnd/storage/app/${requestMaintenance?.MR_Evidence1}`,
-                          }}
+                            uri: `http://192.168.0.10/ITABackEnd/storage/app/${requestMaintenance?.MR_Evidence1}`,
+                            }}
                             alt="image1"
                             size="md"
                         />
@@ -67,7 +67,7 @@ function VieMaiRel({navigation, route}){
                     {requestMaintenance?.MR_Evidence2 && (
                         <Image
                         source={{
-                            uri: `http://192.168.100.167/ITABackEnd/storage/app/${requestMaintenance?.MR_Evidence2}`,
+                            uri: `http://192.168.100.96/ITABackEnd/storage/app/${requestMaintenance?.MR_Evidence2}`,
                           }}
                             alt="image2"
                             size="md"
@@ -77,22 +77,23 @@ function VieMaiRel({navigation, route}){
                     {requestMaintenance?.MR_Evidence3 && (
                         <Image
                         source={{
-                            uri: `http://192.168.100.167/ITABackEnd/storage/app/${requestMaintenance?.MR_Evidence3}`,
+                            uri: `http://192.168.100.96/ITABackEnd/storage/app/${requestMaintenance?.MR_Evidence3}`,
                           }}
                             alt="image3"
                             size="md"
                         />
                     )}
-                    </HStack>
-                <Text _dark={{color: "tema.2"}} _light={{color: "tema.3"}} fontSize="md"><Text bold fontSize={'xl'}>Asignado A: </Text> {requestMaintenance?.employeeName}</Text>
-                <Text _dark={{color: "tema.2"}} _light={{color: "tema.3"}} fontSize="md"><Text bold fontSize={'xl'}>Fecha de Realización: </Text> {requestMaintenance?.maintenanceDate}</Text>
-                <Text _dark={{color: "tema.2"}} _light={{color: "tema.3"}} fontSize="md"><Text bold fontSize={'xl'}>Trabajo Realizado: </Text>  {requestMaintenance?.jobDescription}</Text>
-                <Text _dark={{color: "tema.2"}} _light={{color: "tema.3"}} fontSize="xl" bold>Evidencia de Trabajo: </Text>
-                    <HStack justifyContent={"center"}>
+                </HStack>
+
+                <Text _dark={{color: "tema.2"}} _light={{color: "tema.3"}} fontSize="md" marginTop="3%"><Text bold fontSize={'xl'}>Asignado A: </Text> {requestMaintenance?.employeeName}</Text>
+                <Text _dark={{color: "tema.2"}} _light={{color: "tema.3"}} fontSize="md" marginTop="3%"><Text bold fontSize={'xl'}>Fecha de Realización: </Text> {requestMaintenance?.maintenanceDate}</Text>
+                <Text _dark={{color: "tema.2"}} _light={{color: "tema.3"}} fontSize="md" marginTop="3%"><Text bold fontSize={'xl'}>Trabajo Realizado: </Text>  {requestMaintenance?.jobDescription}</Text>
+                <Text _dark={{color: "tema.2"}} _light={{color: "tema.3"}} fontSize="xl" bold marginTop="3%">Evidencia de Trabajo: </Text>
+                <HStack space={4} marginTop="3%" justifyContent={"center"}>
                     {requestMaintenance?.WO_Evidence1 && (
                         <Image
                         source={{
-                            uri: `http://192.168.100.167/ITABackEnd/storage/app/${requestMaintenance?.WO_Evidence1}`,
+                            uri: `http://192.168.0.10/ITABackEnd/storage/app/${requestMaintenance?.WO_Evidence1}`,
                           }}
                             alt="image1"
                             size="md"
@@ -102,7 +103,7 @@ function VieMaiRel({navigation, route}){
                     {requestMaintenance?.WO_Evidence2 && (
                         <Image
                         source={{
-                            uri: `http://192.168.100.167/ITABackEnd/storage/app/${requestMaintenance?.WO_Evidence2}`,
+                            uri: `http://192.168.100.96/ITABackEnd/storage/app/${requestMaintenance?.WO_Evidence2}`,
                           }}
                             alt="image2"
                             size="md"
@@ -112,21 +113,22 @@ function VieMaiRel({navigation, route}){
                     {requestMaintenance?.WO_Evidence3 && (
                         <Image
                         source={{
-                            uri: `http://192.168.100.167/ITABackEnd/storage/app/${requestMaintenance?.WO_Evidence3}`,
+                            uri: `http://192.168.100.96/ITABackEnd/storage/app/${requestMaintenance?.WO_Evidence3}`,
                           }}
                             alt="image3"
                             size="md"
                         />
                     )}
-                    </HStack>
-                <Text alignSelf={'center'} color={'tema.10'} fontSize="md"><Text  _dark={{color: "tema.2"}} _light={{color: "tema.3"}} bold fontSize={'xl'}>Estatus: </Text> {requestMaintenance?.status.toUpperCase()}</Text>
+                </HStack>
+
+                <Text alignSelf={'center'} color={'tema.10'} fontSize="md" marginTop="8%"><Text  _dark={{color: "tema.2"}} _light={{color: "tema.3"}} bold fontSize={'xl'}>Estatus: </Text> {requestMaintenance?.status.toUpperCase()}</Text>
                     
             </Box>
 
             <HStack height="10%" alignItems="center" alignSelf="center" space="10">
                 
                 <TouchableOpacity onPress={() => navigation.navigate("menmaireq", {personaldata_id: personaldata_id, id: id})}>
-                    <Image size="10" source={require('../assets/U1B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="profile" />
+                    <Image size="10" source={require('../assets/C1B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="home" />
                 </TouchableOpacity>
 
                 <TouchableOpacity onPress={() => navigation.navigate("settings")}>

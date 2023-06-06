@@ -149,7 +149,7 @@ function ForMaiReq({ navigation }) {
 
         try {
             const response = await axios.post(
-                'http://192.168.100.167/ITABackEnd/public/api/maintenance_store',
+                'http://192.168.8.103/ITABackEnd/public/api/maintenance_store',
                 formData,
                 {
                     headers: {
@@ -238,7 +238,7 @@ function ForMaiReq({ navigation }) {
                     <Select.Item label="Recursos Materiales" value="recursosMateriales" />
                     <Select.Item label="Mantenimiento" value="mantenimiento" />
                     <Select.Item label="Recursos Financieros" value="recursosFinancieros" />
-                    <Select.Item label="Centro de Cómputo" value="cc" />
+                    <Select.Item label="Centro de Cómputo" value="centroComputo" />
                     <Select.Item label="Subdirección de Planeación y Vinculación" value="subVinculacion" />
                     <Select.Item label="Servicios Escolares" value="servEscolares" />
                     <Select.Item label="Gestión Tecnológica y Vinculación" value="gestionTecnologica" />
@@ -285,8 +285,8 @@ function ForMaiReq({ navigation }) {
                 </Button>
 
                 <Button marginTop="3%" rounded="lg" w="40%" alignSelf="center" _pressed={{ bg: 'tema.6' }} _dark={{ bg: "tema.2" }} _light={{ bg: "tema.3" }} onPress={() => { handleClear(); navigation.navigate("menmaireq", { personaldata_id: personaldata_id, id: id }) }}>
-                    <Text _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }}>Cancelar</Text>
-                </Button>
+                    <Text _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }}>Cancelar</Text></Button>
+
             </Box>
 
             <HStack height="10%" alignItems="center" alignSelf="center" space="10">
@@ -296,15 +296,22 @@ function ForMaiReq({ navigation }) {
                 </TouchableOpacity>
 
                 <TouchableOpacity onPress={() => setIsOpen(!Info)}>
-                    <Image size="10" source={require('../assets/S1B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="info" />
+                    <Image size="12" source={require('../assets/S1B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="info" />
                     <AlertDialog isOpen={Info} onClose={CloseI}>
                         <AlertDialog.Content _dark={{ bg: "tema.2" }} _light={{ bg: "tema.3" }}>
                             <AlertDialog.Body _dark={{ bg: "tema.2" }} _light={{ bg: "tema.3" }} alignSelf="center">
                                 <TouchableOpacity onPress={CloseI}>
                                     <Image size="5" marginLeft="90%" marginBottom="10%" source={require('../assets/XA.png')} _dark={{ color: "tema.3", tintColor: "tema.3" }} _light={{ color: "tema.2", tintColor: "tema.2" }} alt="close" />
                                 </TouchableOpacity>
-                                <Text _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }} fontSize="md" textAlign="center">"Reporta las fallas en la infraestructura dentro del ITA.</Text>  {"\t"}
-                                <Text _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }} fontSize="md" textAlign="center">Puedes consultar las solicitudes de mantenimiento activas, así como el historial de estas".</Text>
+                                <Text _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }} fontSize="md">Nombre del documento:</Text>
+                                <Text _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }} fontSize="md">Formato para Solicitudes de Mantenimiento Correctivo.</Text>
+                                <Text></Text>
+                                <Text _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }} fontSize="md">Referencia de la Norma</Text>
+                                <Text _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }} fontSize="md">ISO 9001:2015</Text>
+                                <Text _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }} fontSize="md">6.1, 7.1, 7.2, 7.4, 7.5.1, 8.1</Text>
+                                <Text></Text>
+                                <Text _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }} fontSize="md">Código:</Text>
+                                <Text _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }} fontSize="md">ITA-AD-PO-001-02</Text>
                                 <Button marginTop="10%" alignSelf="center" w="90px" borderRadius="10" _pressed={{ bg: 'tema.6' }} _dark={{ bg: "tema.3" }} _light={{ bg: "tema.2" }} onPress={CloseI}>
                                     <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }}>Aceptar</Text>
                                 </Button>
@@ -340,6 +347,7 @@ function ForMaiReq({ navigation }) {
                 </TouchableOpacity>
 
             </HStack>
+
 
         </VStack>
     )

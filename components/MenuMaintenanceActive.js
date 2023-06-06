@@ -23,7 +23,7 @@ function MenMaiAct({ navigation, route }) {
     const getMaintenanceReq = async () => {
         try {
             const response = await axios.get(
-                `http://192.168.100.167/ITABackEnd/public/api/maintenance_active/${personaldata_id}`,
+                `http://192.168.100.96/ITABackEnd/public/api/maintenance_active/${personaldata_id}`,
               {
                 headers: {
                   'Content-Type': 'multipart/form-data',
@@ -43,7 +43,7 @@ function MenMaiAct({ navigation, route }) {
     const onSubmit = async ($id) => {
         try {
             const response = await axios.get(
-                `http://192.168.100.167/ITABackEnd/public/api/maintenance_show/${$id}`,
+                `http://192.168.100.96/ITABackEnd/public/api/maintenance_show/${$id}`,
                 {
                     headers: {
                         'Content-Type': 'multipart/form-data',

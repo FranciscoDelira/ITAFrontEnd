@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { VStack, Text, Image, Box, HStack, AlertDialog, Button, Input,Heading } from "native-base";
+import { VStack, Text, Image, Box, HStack, AlertDialog, Button, Input,Heading, ScrollView } from "native-base";
 import DatePicker, { getFormatedDate } from "react-native-modern-datepicker";
 import { View, Modal, TouchableOpacity } from "react-native";
 import { launchImageLibrary } from "react-native-image-picker";
@@ -68,6 +68,7 @@ function VieWorOrdApr({ navigation, route }) {
             <Heading _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} textAlign="center" height="15%" alignSelf="center" fontSize="3xl" paddingTop="10%">Órden de trabajo de Mantenimiento</Heading>
 
             <Box height="70%" w="90%" alignSelf="center">
+                <ScrollView>
 
                 <View>
                     <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="md" marginTop="3%" fontWeight="bold">Fecha de solicitud:
@@ -157,12 +158,13 @@ function VieWorOrdApr({ navigation, route }) {
 
                 <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="md" marginTop="3%" textAlign="center" fontWeight="bold">Estatus: <Text color="orange.400">LIBERADA</Text></Text>
 
+                </ScrollView>
             </Box>
 
             <HStack height="10%" alignItems="center" alignSelf="center" space="10">
 
                 <TouchableOpacity onPress={() => navigation.navigate("menworord",{ personaldata_id: personaldata_id, id: id })}>
-                    <Image size="10" source={require('../assets/C1B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="profile" />
+                    <Image size="10" source={require('../assets/C1B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="home" />
                 </TouchableOpacity>
 
                 <TouchableOpacity onPress={() => navigation.navigate("settings",{ personaldata_id: personaldata_id, id: id })}>

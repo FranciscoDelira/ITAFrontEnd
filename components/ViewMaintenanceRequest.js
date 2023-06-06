@@ -1,5 +1,5 @@
 import React from "react";
-import { VStack, Text, Heading, Image, Box, HStack, AlertDialog, Button, Select, CheckIcon, TextArea } from "native-base";
+import { VStack, Text, Heading, Image, Box, HStack, AlertDialog, Button, TextArea } from "native-base";
 import { TouchableOpacity } from "react-native";
 import { useEffect } from "react";
 import { useState } from "react";
@@ -27,7 +27,7 @@ function VieMaiReq({navigation, route}) {
         //Función para obtener los datos de la solicitud
         const getMaintenanceReq = async () => {
             try{
-                const response = await fetch(`http://192.168.100.167/ITABackEnd/public/api/maintenance_show/${requestId}`);
+                const response = await fetch(`http://192.168.100.96/ITABackEnd/public/api/maintenance_show/${requestId}`);
                 const data = await response.json();
                 setRequestMaintenance(data);
             }catch (error) {
@@ -47,15 +47,15 @@ function VieMaiReq({navigation, route}) {
                 
                 <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} alignSelf="flex-end" fontSize="md"><Text fontSize={'xl'} bold>Folio:</Text> {requestMaintenance?.id}</Text>
                 <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="md" marginTop="3%"> <Text bold fontSize={'xl'}>Fecha:</Text> {requestMaintenance?.requestDate}</Text>
-                <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="xl" bold>Descripción: </Text>
-                <TextArea _dark={{ color: "tema.2", borderColor: "tema.2" }} _light={{ color: "tema.3", borderColor: "tema.2" }} fontSize="md">{requestMaintenance?.requestDescription}</TextArea>
-                <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="xl" bold>Evidencia: </Text>
+                <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="xl" bold marginTop="3%">Descripción: </Text>
+                <TextArea _dark={{ color: "tema.2", borderColor: "tema.2" }} _light={{ color: "tema.3", borderColor: "tema.2" }} fontSize="md" marginTop="3%">{requestMaintenance?.requestDescription}</TextArea>
+                <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="xl" bold marginTop="3%">Evidencia: </Text>
                
-                <HStack justifyContent={"center"}>
+                <HStack space={4} marginTop="3%" justifyContent={"center"}>
                     {requestMaintenance?.evidence1 && (
                         <Image
                         source={{
-                            uri: `http://192.168.100.167/ITABackEnd/storage/app/${requestMaintenance?.evidence1}`,
+                            uri: `http://192.168.100.96/ITABackEnd/storage/app/${requestMaintenance?.evidence1}`,
                           }}
                             alt="image1"
                             size="md"
@@ -65,7 +65,7 @@ function VieMaiReq({navigation, route}) {
                     {requestMaintenance?.evidence2 && (
                         <Image
                         source={{
-                            uri: `http://192.168.100.167/ITABackEnd/storage/app/${requestMaintenance?.evidence2}`,
+                            uri: `http://192.168.100.96/ITABackEnd/storage/app/${requestMaintenance?.evidence2}`,
                           }}
                             alt="image2"
                             size="md"
@@ -75,7 +75,7 @@ function VieMaiReq({navigation, route}) {
                     {requestMaintenance?.evidence3 && (
                         <Image
                         source={{
-                            uri: `http://192.168.100.167/ITABackEnd/storage/app/${requestMaintenance?.evidence3}`,
+                            uri: `http://192.168.100.96/ITABackEnd/storage/app/${requestMaintenance?.evidence3}`,
                           }}
                             alt="image3"
                             size="md"
@@ -83,7 +83,7 @@ function VieMaiReq({navigation, route}) {
                     )}
                 </HStack>
 
-                <Text alignSelf={'center'} color={'tema.8'} fontSize="md"><Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} bold fontSize={'xl'}>Estatus: </Text>{requestMaintenance?.status.toUpperCase()}</Text>
+                <Text alignSelf={'center'} color={'tema.8'} fontSize="md" marginTop="8%"><Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} bold fontSize={'xl'} >Estatus: </Text>{requestMaintenance?.status.toUpperCase()}</Text>
 
 
             </Box>
@@ -91,7 +91,7 @@ function VieMaiReq({navigation, route}) {
             <HStack height="10%" alignItems="center" alignSelf="center" space="10">
                 
                 <TouchableOpacity onPress={() => navigation.navigate("menmaireq", {personaldata_id: personaldata_id, id: id})}>
-                    <Image size="10" source={require('../assets/U1B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="profile" />
+                    <Image size="10" source={require('../assets/C1B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="home" />
                 </TouchableOpacity>
 
                 <TouchableOpacity onPress={() => navigation.navigate("settings", {personaldata_id: personaldata_id, id: id})}>

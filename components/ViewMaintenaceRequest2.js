@@ -1,5 +1,5 @@
 import React from "react";
-import { VStack, Text, Heading, Image, Box, HStack, AlertDialog, Button, Select, CheckIcon, TextArea } from "native-base";
+import { VStack, Text, Heading, Image, Box, HStack, AlertDialog, Button, TextArea } from "native-base";
 import { TouchableOpacity } from "react-native";
 
 function VieMaiReq2({navigation}) {
