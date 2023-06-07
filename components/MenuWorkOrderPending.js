@@ -7,11 +7,7 @@ function MenWorOrdPen({ navigation, route }) {
 
     /* recibe los parametros del id del user y del personal data */
     const { personaldata_id } = route.params;
-    //console.log('Menu Work order pending')
-    //console.log('PersonalData ID:',personaldata_id);
     const { id } = route.params;
-    //console.log('User ID:', id);
-    var statusWO = '';
     const [Exit, setIsOpen1] = React.useState(false);
     const CloseE = () => setIsOpen1(false);
 
@@ -24,7 +20,7 @@ function MenWorOrdPen({ navigation, route }) {
     const getWorkOrderPending = async () => {
         try {
             const response = await axios.get(
-                `http://192.168.100.94/ITABackEnd/public/api/workorder_pending/${personaldata_id}`,
+                `http://192.168.100.93/ITABackEnd/public/api/workorder_pending/${personaldata_id}`,
                 {
                     headers: {
                         'Content-Type': 'multipart/form-data',
@@ -35,17 +31,11 @@ function MenWorOrdPen({ navigation, route }) {
 
             setWorkOrderP(response.data);
 
-            if(response.data.jobDescription===null){
-                statusWO = 'PENDIENTE';
-                
-            }else{
-                statusWO = 'POR LIBERAR'
-            }
-
         } catch (error) {
             console.log(error);
         }
     }
+
 
     return (
         <VStack height="100%" width="100%" space={4} _dark={{ bg: "tema.3" }} _light={{ bg: "tema.2" }}>
@@ -62,7 +52,7 @@ function MenWorOrdPen({ navigation, route }) {
                     <Text bold fontSize="xs" _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }}>Fecha de solicitud: {WOPending.requestDate}</Text>
                     <HStack marginTop={"5%"} alignItems="center">
                         {/* VALIDAR PARA MOSTRAR UN ESTATUS PENDIENTE O POR LIBERAR */}
-                        <Text bold fontSize="sm" _dark={{ color: "tema.7" }} _light={{ color: "tema.8" }}>{statusWO}</Text>
+                        <Text bold fontSize="sm" _dark={{ color: "tema.7" }} _light={{ color: "tema.8" }}>{WOPending.status.toUpperCase()}</Text>
                         <Button size="9" borderRadius={25} marginLeft={"58%"} variant="unstyled" _pressed={{ bg: 'tema.6' }} onPress={() => navigation.navigate("vieworordpen",{ personaldata_id: personaldata_id, id: id })}>
                             <Image size="7" source={require('../assets/PL1N.png')} _dark={{ color: "tema.3", tintColor: "tema.3" }} _light={{ color: "tema.2", tintColor: "tema.2" }} alt="open" />
                         </Button>
