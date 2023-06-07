@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Box, Button, VStack, Heading, Image, HStack, AlertDialog, Text } from "native-base";
 import { TouchableOpacity } from "react-native";
 import axios from "axios";
+import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
+
 
 function MenWorOrdRel({ navigation, route }) {
 
@@ -45,7 +47,7 @@ function MenWorOrdRel({ navigation, route }) {
             <Image alignSelf="center" width="100%" height="10%" marginTop="10%" source={require('../assets/TNM3A.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="TECNM" />
 
             <Heading height="15%" textAlign={"center"} alignSelf="center" _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="4xl">Ordenes de trabajo liberadas</Heading>
-
+            <KeyboardAwareScrollView>
             <Box height="55%" w="90%" alignSelf="center" >
                 {workOrderR.map((WOReleased) => (
                     <Box _dark={{ bg: "tema.2", color: "tema.3" }} _light={{ bg: "tema.3", color: "tema.2" }} _pressed={{ bg: 'tema.6' }} borderRadius="xl" height={"32%"} marginBottom="5%" padding={"3%"} key={WOReleased.id}>
@@ -61,7 +63,7 @@ function MenWorOrdRel({ navigation, route }) {
                     </Box>
                 ))}
             </Box>
-
+            </KeyboardAwareScrollView>
             <HStack height="10%" alignItems="center" alignSelf="center" space="10">
 
                 <TouchableOpacity onPress={() => navigation.navigate("menworord", { personaldata_id: personaldata_id, id: id })}>

@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Box, Button, VStack, Heading, Image, HStack, AlertDialog, Text } from "native-base";
 import { TouchableOpacity } from "react-native";
 import axios from "axios";
+import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
+
 
 function MenWorOrdApr({ navigation, route }) {
     /* recibe los parametros del id del user y del personal data */
@@ -44,7 +46,7 @@ function MenWorOrdApr({ navigation, route }) {
             <Image alignSelf="center" width="100%" height="10%" marginTop="10%" source={require('../assets/TNM3A.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="TECNM" />
 
             <Heading height="15%" textAlign={"center"} alignSelf="center" _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="4xl" paddingTop="5%">Ordenes de trabajo aprobadas</Heading>
-
+            <KeyboardAwareScrollView>
             <Box height="55%" w="90%" alignSelf="center" >
 
                 {workOrderA.map((WOApproved) => (
@@ -62,7 +64,7 @@ function MenWorOrdApr({ navigation, route }) {
                 ))}
 
             </Box>
-
+            </KeyboardAwareScrollView>
             <HStack height="10%" alignItems="center" alignSelf="center" space="10">
 
                 <TouchableOpacity onPress={() => navigation.navigate("menworord", { personaldata_id: personaldata_id, id: id })}>
