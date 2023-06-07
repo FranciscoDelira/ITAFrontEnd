@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Box, Button, VStack, Heading, Image, HStack, AlertDialog, Text } from "native-base";
+import { Box, Button, VStack, Heading, Image, HStack, AlertDialog, Text, ScrollView } from "native-base";
 import { TouchableOpacity } from "react-native";
+import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import axios from "axios";
 
 function MenMaiAct({ navigation, route }) {
@@ -69,13 +70,13 @@ function MenMaiAct({ navigation, route }) {
             <Image alignSelf="center" width="100%" height="10%" marginTop="10%" source={require('../assets/TNM3A.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="TECNM" />
 
             <Heading height="15%" textAlign={"center"} alignSelf="center" _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="3xl" >Solicitudes de mantenimiento activas</Heading>
-
-            <Box height="55%" w="90%" alignSelf="center" >
+            <KeyboardAwareScrollView>
+            <Box  height={"55%"} w="90%" alignSelf="center">
                 {maintenanceR.map((requests) => (
                     <Box _dark={{ bg: "tema.2", color: "tema.3" }} _light={{ bg: "tema.3", color: "tema.2" }} _pressed={{ bg: 'tema.6' }} borderRadius="xl" height={"32%"} marginBottom="5%" padding={"3%"} key={requests.id}>
                         <Text bold fontSize="xs" _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }} >Folio: {requests.id} </Text>
                         <Text bold fontSize="xs" _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }}>Fecha de solicitud: {requests.requestDate}</Text>
-                        <HStack marginTop={"10%"} alignItems="center">
+                        <HStack  alignItems="center">
                             <Text bold fontSize="sm" _dark={{ color: "tema.8" }} _light={{ color: "tema.8" }}>{requests.status.toUpperCase()}</Text>
                             <Button size="9" borderRadius={25} marginLeft={"58%"} variant="unstyled" _pressed={{ bg: 'tema.6' }} onPress={() => onSubmit(requests.id)}>
                                 <Image size="7" source={require('../assets/PL1N.png')} _dark={{ color: "tema.3", tintColor: "tema.3" }} _light={{ color: "tema.2", tintColor: "tema.2" }} alt="open" />
@@ -85,7 +86,7 @@ function MenMaiAct({ navigation, route }) {
                 ))}
 
             </Box>
-
+            </KeyboardAwareScrollView>
             <HStack height="10%" alignItems="center" alignSelf="center" space="10">
 
                 <TouchableOpacity onPress={() => navigation.navigate("menmaireq", { personaldata_id: personaldata_id, id: id })}>

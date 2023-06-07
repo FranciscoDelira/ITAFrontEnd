@@ -249,7 +249,7 @@ function ForMaiReq({ navigation }) {
                 </Select>
 
                 <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="md" marginTop="4%">Descripción: </Text>
-                <Input value={formReact.requestDescription} onChangeText={(value) => setFormReact({ ...formReact, requestDescription: value })} _dark={{ bg: "tema.2", color: "tema.3", placeholderTextColor: "tema.3" }} _light={{ bg: "tema.3", color: "tema.2", placeholderTextColor: "tema.2" }} marginTop="2%" borderColor="tema.1" fontSize="md" height="15%" />
+                <Input value={formReact.requestDescription} onChangeText={(value) => setFormReact({ ...formReact, requestDescription: value })} _dark={{ bg: "tema.2", color: "tema.3", placeholderTextColor: "tema.3" }} _light={{ bg: "tema.3", color: "tema.2", placeholderTextColor: "tema.2" }} _focus={{ bg: "tema.6", borderColor: "tema.1" }} marginTop="2%" borderColor="tema.1" fontSize="md" height="15%" />
 
                 <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="md" marginTop="3%">Añadir Evidencia:</Text>
                 <HStack space="4" alignSelf="center" marginTop="3%">
