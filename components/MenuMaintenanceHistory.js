@@ -51,12 +51,12 @@ function MenMaiHis({ navigation, route }) {
 
             <Heading height="15%" textAlign={"center"} alignSelf="center" _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="4xl">Historial de solicitudes</Heading>
             <KeyboardAwareScrollView>
-            <Box height="65%" w="90%" alignSelf="center" >
+            <Box height="55 %" w="90%" alignSelf="center" >
             {maintenanceR.map((requests) => (
-                <Box _dark={{ bg: "tema.2", color: "tema.3" }} _light={{ bg: "tema.3", color: "tema.2" }} _pressed={{ bg: 'tema.6' }} borderRadius="xl" height={"32%"} marginBottom="5%" padding={"3%"} key={requests.id}>
+                <Box _dark={{ bg: "tema.2", color: "tema.3" }} _light={{ bg: "tema.3", color: "tema.2" }} _pressed={{ bg: 'tema.6' }} borderRadius="xl" height={"100px"} marginBottom="5%" padding={"3%"} key={requests.id}>
                     <Text bold fontSize="xs" _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }}>Folio: {requests.id}</Text>
                     <Text bold fontSize="xs" _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }}>Fecha de solicitud: {requests.requestDate}</Text>
-                    <HStack marginTop={"10%"} alignItems="center">
+                    <HStack  alignItems="center">
                         <Text bold fontSize="sm" color="tema.10" >{requests.status.toUpperCase()}</Text>
                         <Button size="9" borderRadius={25} marginLeft={"58%"} variant="unstyled" _pressed={{ bg: 'tema.6' }} onPress={() => navigation.navigate("viemairel",{personaldata_id: personaldata_id, id: id, requestId: requests.id})}>
                             <Image size="7" source={require('../assets/PL1N.png')} _dark={{ color: "tema.3", tintColor: "tema.3" }} _light={{ color: "tema.2", tintColor: "tema.2" }} alt="open" />

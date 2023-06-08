@@ -50,11 +50,11 @@ function MenWorOrdApr({ navigation, route }) {
             <Box height="55%" w="90%" alignSelf="center" >
 
                 {workOrderA.map((WOApproved) => (
-                    <Box _dark={{ bg: "tema.2", color: "tema.3" }} _light={{ bg: "tema.3", color: "tema.2" }} _pressed={{ bg: 'tema.6' }} borderRadius="xl" height={"32%"} marginBottom="5%" padding={"3%"}>
+                    <Box _dark={{ bg: "tema.2", color: "tema.3" }} _light={{ bg: "tema.3", color: "tema.2" }} _pressed={{ bg: 'tema.6' }} borderRadius="xl" height={"150px"} marginBottom="5%" padding={"3%"}>
                         <Text bold fontSize="xs" _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }}>Folio: {WOApproved.id}</Text>
                         <Text bold fontSize="xs" _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }}>Area solicitante: {WOApproved.department}</Text>
                         <Text bold fontSize="xs" _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }}>Fecha de solicitud: {WOApproved.requestDate}</Text>
-                        <HStack marginTop={"8%"} alignItems="center">
+                        <HStack  alignItems="center">
                             <Text bold fontSize="sm" _dark={{ color: "tema.9" }} _light={{ color: "tema.9" }}>APROBADA</Text>
                             <Button size="9" borderRadius={25} marginLeft={"58%"} variant="unstyled" _pressed={{ bg: 'tema.6' }} onPress={() => navigation.navigate("vieworordapr", { personaldata_id: personaldata_id, id: id })}>
                                 <Image size="7" source={require('../assets/PL1N.png')} _dark={{ color: "tema.3", tintColor: "tema.3" }} _light={{ color: "tema.2", tintColor: "tema.2" }} alt="open" />

@@ -48,11 +48,11 @@ function MenWorOrdPen({ navigation, route }) {
             <KeyboardAwareScrollView>
             <Box height="55%" w="90%" alignSelf="center" >
             {workOrderP.map((WOPending) => (
-                <Box _dark={{ bg: "tema.2", color: "tema.3" }} _light={{ bg: "tema.3", color: "tema.2" }} _pressed={{ bg: 'tema.6' }} borderRadius="xl" height={"32%"} marginBottom="5%" padding={"3%"} key={WOPending.id}>
+                <Box _dark={{ bg: "tema.2", color: "tema.3" }} _light={{ bg: "tema.3", color: "tema.2" }} _pressed={{ bg: 'tema.6' }} borderRadius="xl" height={"150px"} marginBottom="5%" padding={"3%"} key={WOPending.id}>
                     <Text bold fontSize="xs" _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }}>Folio: {WOPending.id}</Text>
                     <Text bold fontSize="xs" _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }}>Area solicitante: {WOPending.department}</Text>
                     <Text bold fontSize="xs" _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }}>Fecha de solicitud: {WOPending.requestDate}</Text>
-                    <HStack marginTop={"5%"} alignItems="center">
+                    <HStack  alignItems="center">
                         {/* VALIDAR PARA MOSTRAR UN ESTATUS PENDIENTE O POR LIBERAR */}
                         <Text bold fontSize="sm" _dark={{ color: "tema.7" }} _light={{ color: "tema.8" }}>{WOPending.status.toUpperCase()}</Text>
                         <Button size="9" borderRadius={25} marginLeft={"58%"} variant="unstyled" _pressed={{ bg: 'tema.6' }} onPress={() => navigation.navigate("vieworordpen",{ personaldata_id: personaldata_id, id: id })}>
