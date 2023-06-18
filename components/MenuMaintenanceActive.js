@@ -21,12 +21,10 @@ function MenMaiAct({ navigation, route }) {
         getMaintenanceReq()
     });
 
-    console.log(maintenanceR);
-
     const getMaintenanceReq = async () => {
         try {
             const response = await axios.get(
-                `http://192.168.100.96/ITABackEnd/public/api/maintenance_active/${personaldata_id}`,
+                `http://192.168./ITABackEnd/public/api/maintenance_active/${personaldata_id}`,
               {
                 headers: {
                   'Content-Type': 'multipart/form-data',
@@ -46,7 +44,7 @@ function MenMaiAct({ navigation, route }) {
     const onSubmit = async ($id) => {
         try {
             const response = await axios.get(
-                `http://192.168.100.96/ITABackEnd/public/api/maintenance_show/${$id}`,
+                `http://192.168./ITABackEnd/public/api/maintenance_show/${$id}`,
                 {
                     headers: {
                         'Content-Type': 'multipart/form-data',
@@ -75,13 +73,13 @@ function MenMaiAct({ navigation, route }) {
             <KeyboardAwareScrollView>
             <Box  height={"55%"} w="90%" alignSelf="center">
                 {maintenanceR.map((requests) => (
-                    <Box _dark={{ bg: "tema.2", color: "tema.3" }} _light={{ bg: "tema.3", color: "tema.2" }} _pressed={{ bg: 'tema.6' }} borderRadius="xl" height={"100px"} marginBottom="5%" padding={"3%"} key={requests.id}>
-                        <Text bold fontSize="xs" _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }} >Folio: {requests.id} </Text>
-                        <Text bold fontSize="xs" _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }}>Fecha de solicitud: {requests.requestDate}</Text>
-                        <HStack  alignItems="center">
-                            <Text bold fontSize="sm" _dark={{ color: "tema.8" }} _light={{ color: "tema.8" }}>{requests.status.toUpperCase()}</Text>
+                    <Box _dark={{ bg: "tema.2", color: "tema.3" }} _light={{ bg: "tema.3", color: "tema.2" }} _pressed={{ bg: 'tema.6' }} borderRadius="xl" height={"130px"} marginBottom="5%" padding={"3%"} key={requests.id}>
+                        <Text bold fontSize="md" _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }} >Folio: {requests.id} </Text>
+                        <Text bold fontSize="md" _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }}>Fecha de solicitud: {requests.requestDate}</Text>
+                        <HStack  alignItems="center" marginTop={"8%"}>
+                            <Text bold fontSize="md" _dark={{ color: "tema.8" }} _light={{ color: "tema.8" }}>{requests.status.toUpperCase()}</Text>
                             <Button size="9" borderRadius={25} marginLeft={"58%"} variant="unstyled" _pressed={{ bg: 'tema.6' }} onPress={() => onSubmit(requests.id)}>
-                                <Image size="7" source={require('../assets/PL1N.png')} _dark={{ color: "tema.3", tintColor: "tema.3" }} _light={{ color: "tema.2", tintColor: "tema.2" }} alt="open" />
+                                <Image size="7" marginLeft={"60%"} source={require('../assets/PL1N.png')} _dark={{ color: "tema.3", tintColor: "tema.3" }} _light={{ color: "tema.2", tintColor: "tema.2" }} alt="open" />
                             </Button>
                         </HStack>
                     </Box>
