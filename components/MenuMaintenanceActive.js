@@ -70,6 +70,7 @@ function MenMaiAct({ navigation, route }) {
             <Image alignSelf="center" width="100%" height="10%" marginTop="10%" source={require('../assets/TNM3A.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="TECNM" />
 
             <Heading height="15%" textAlign={"center"} alignSelf="center" _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="3xl" >Solicitudes de mantenimiento activas</Heading>
+           
             <KeyboardAwareScrollView>
             <Box  height={"55%"} w="90%" alignSelf="center">
                 {maintenanceR.map((requests) => (
@@ -84,9 +85,9 @@ function MenMaiAct({ navigation, route }) {
                         </HStack>
                     </Box>
                 ))}
-
             </Box>
             </KeyboardAwareScrollView>
+
             <HStack height="10%" alignItems="center" alignSelf="center" space="10">
 
                 <TouchableOpacity onPress={() => navigation.navigate("menmaireq", { personaldata_id: personaldata_id, id: id })}>
