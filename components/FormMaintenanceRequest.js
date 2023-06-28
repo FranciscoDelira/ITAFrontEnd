@@ -149,7 +149,7 @@ function ForMaiReq({ navigation }) {
 
         try {
             const response = await axios.post(
-                'http://192.168.8.103/ITABackEnd/public/api/maintenance_store',
+                'http://192.168./ITABackEnd/public/api/maintenance_store',
                 formData,
                 {
                     headers: {

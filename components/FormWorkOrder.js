@@ -77,6 +77,7 @@ function ForWorOrd({ navigation, route }){
                 <Input _dark={{ bg: "tema.2", color: "tema.3", placeholderTextColor: "tema.3" }} _light={{ bg: "tema.3", color: "tema.2", placeholderTextColor: "tema.2" }} borderColor="tema.1" fontSize="md" height="15%" />
 
                 <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="md" marginTop="3%">Añadir Evidencia:</Text>
+                
                 <HStack space="4" alignSelf="center" marginTop="3%">
                     <Button h="20" w="20" borderWidth={0.5} _pressed={{ bg: 'tema.6' }} _dark={{ bg: "tema.3" }} _light={{ bg: "tema.2" }} onPress={openGallery}>
                         <Image size="10" source={require('../assets/Image.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="Add image" />
@@ -123,9 +124,11 @@ function ForWorOrd({ navigation, route }){
                         </AlertDialog.Content>
                     </AlertDialog>
                 </Button>
+
                 <Button marginTop="3%" rounded="lg" w="40%" alignSelf="center" _pressed={{ bg: 'tema.6' }} _dark={{ bg: "tema.2" }} _light={{ bg: "tema.3" }}>
                     <Text _dark={{color: "tema.3"}} _light={{color: "tema.2"}} fontSize="md" textAlign="center">Cancelar</Text>
                 </Button>
+
             </Box>
 
             <HStack height="10%" alignItems="center" alignSelf="center" space="10">
