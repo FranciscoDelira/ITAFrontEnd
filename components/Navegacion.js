@@ -17,6 +17,7 @@ import Settings from "./Settings";
 import VieMaiRel from "./ViewMaintenanceReleased";
 import VieMaiReq from "./ViewMaintenanceRequest";
 import VieWorOrdApr from "./ViewWorkOrderAprovedRealeased";
+import VieWorOrdRel from "./ViewWorkOrderRealeased";
 import VieWorOrdPen from "./ViewWorkOrderPending";
 import VieMaiReq2 from "./ViewMaintenaceRequest2";
 
@@ -44,6 +45,7 @@ function Navegacion () {
             <Stack.Screen name="viemaireq" component={VieMaiReq}/>
             <Stack.Screen name="viemaireq2" component={VieMaiReq2}/>
             <Stack.Screen name="vieworordapr" component={VieWorOrdApr}/>
+            <Stack.Screen name="vieworordrel" component={VieWorOrdRel}/>
             <Stack.Screen name="vieworordpen" component={VieWorOrdPen}/>
         </Stack.Navigator>
     )

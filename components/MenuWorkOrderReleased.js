@@ -9,7 +9,6 @@ function MenWorOrdRel({ navigation, route }) {
 
     /* recibe los parametros del id del user y del personal data */
     const { personaldata_id } = route.params;
-    console.log('Menu Work Order Released')
    // console.log('PersonalData ID:', personaldata_id);
     const { id } = route.params;
    // console.log('User ID:', id);
@@ -51,13 +50,13 @@ function MenWorOrdRel({ navigation, route }) {
             <KeyboardAwareScrollView>
             <Box height="55%" w="90%" alignSelf="center" >
                 {workOrderR.map((WOReleased) => (
-                    <Box _dark={{ bg: "tema.2", color: "tema.3" }} _light={{ bg: "tema.3", color: "tema.2" }} _pressed={{ bg: 'tema.6' }} borderRadius="xl" height={"130px"} marginBottom="5%" padding={"3%"} key={WOReleased.id}>
-                        <Text bold fontSize="md" _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }}>Folio: {WOReleased.id}</Text>
+                    <Box _dark={{ bg: "tema.2", color: "tema.3" }} _light={{ bg: "tema.3", color: "tema.2" }} _pressed={{ bg: 'tema.6' }} borderRadius="xl" height={"130px"} marginBottom="5%" padding={"3%"} key={WOReleased.WOid}>
+                        <Text bold fontSize="md" _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }}>Folio: {WOReleased.WOid}</Text>
                         <Text bold fontSize="md" _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }}>Area solicitante: {WOReleased.department}</Text>
                         <Text bold fontSize="md" _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }}>Fecha de solicitud: {WOReleased.requestDate}</Text>
                         <HStack alignItems="center">
                             <Text bold fontSize="md" _dark={{ color: "tema.10" }} _light={{ color: "tema.10" }}>{WOReleased.status.toUpperCase()}</Text>
-                            <Button size="9" borderRadius={25} marginLeft={"58%"} variant="unstyled" _pressed={{ bg: 'tema.6' }} onPress={() => navigation.navigate("vieworordapr", { personaldata_id: personaldata_id, id: id })}>
+                            <Button size="9" borderRadius={25} marginLeft={"58%"} variant="unstyled" _pressed={{ bg: 'tema.6' }} onPress={() => navigation.navigate("vieworordrel", { personaldata_id: personaldata_id, id: id, requestId: WOReleased.WOid})}>
                                 <Image size="7"  marginLeft={"60%"} source={require('../assets/PL1N.png')} _dark={{ color: "tema.3", tintColor: "tema.3" }} _light={{ color: "tema.2", tintColor: "tema.2" }} alt="open" />
                             </Button>
                         </HStack>

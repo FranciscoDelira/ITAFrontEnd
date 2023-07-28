@@ -62,7 +62,7 @@ function VieMaiRel({navigation, route}){
                     {requestMaintenance?.MR_Evidence1 && (
                         <Image
                         source={{
-                            uri: `http://192.168.0.10/ITABackEnd/storage/app/${requestMaintenance?.MR_Evidence1}`,
+                            uri: `http://192.168./ITABackEnd/storage/app/${requestMaintenance?.MR_Evidence1}`,
                             }}
                             alt="image1"
                             size="md"

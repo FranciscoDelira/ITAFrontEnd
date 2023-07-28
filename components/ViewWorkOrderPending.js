@@ -30,7 +30,6 @@ function VieWorOrdPen({ navigation, route }) {
                     });
                 const data = await response.json();
                 setRequestMaintenance(data);
-                console.log(data);
             } catch (error) {
                 console.log(error);
             }
@@ -38,13 +37,12 @@ function VieWorOrdPen({ navigation, route }) {
         getMaintenanceReq();
     }, [requestId]);
 
-
     return (
         <VStack height="100%" width="100%" space={4} _dark={{ bg: "tema.3" }} _light={{ bg: "tema.2" }}>
             <Heading _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} textAlign="center" height="15%" alignSelf="center" fontSize="3xl" marginTop={"10%"} paddingTop="10%">Orden de Trabajo Pendiente</Heading>
 
             {requestMaintenance.map((request) => (
-                <Box height="65%" w="85%" alignSelf="center" key={request.WorkOrder_id}>
+                <Box height="65%" w="85%" alignSelf="center" key={request}>
                     <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="xl" marginTop="3%"> <Text fontSize={'xl'} bold>Fecha Solicitud:</Text> {request.requestDate} </Text>
                     <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="xl" marginTop="3%" textTransform={"capitalize"}><Text fontSize={'xl'} bold>Departamento: </Text> {request.department} </Text>
                     <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="xl" marginTop="3%" textTransform={"capitalize"}><Text fontSize={'xl'} bold>Area Solicitante: </Text> {request.area} </Text>
