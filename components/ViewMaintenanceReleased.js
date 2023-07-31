@@ -127,7 +127,7 @@ function VieMaiRel({navigation, route}){
                     )}
                 </HStack>
 
-                <Text alignSelf={'center'} color={'tema.10'} fontSize="md" marginTop="8%"><Text  _dark={{color: "tema.2"}} _light={{color: "tema.3"}} bold fontSize={'xl'}>Estatus: </Text> {requestMaintenance?.status.toUpperCase()}</Text>
+                <Text alignSelf={'center'} color={'tema.10'} fontSize="md" marginTop="8%"><Text  _dark={{color: "tema.2"}} _light={{color: "tema.3"}} bold fontSize={'xl'}>Estatus: </Text> {requestMaintenance?.status}</Text>
                     
             </Box>
 

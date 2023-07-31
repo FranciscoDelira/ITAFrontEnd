@@ -79,8 +79,8 @@ function MenMaiAct({ navigation, route }) {
                         <Text bold fontSize="md" _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }}>Fecha de solicitud: {requests.requestDate}</Text>
                         <HStack  alignItems="center" marginTop={"8%"}>
                             <Text bold fontSize="md" _dark={{ color: "tema.8" }} _light={{ color: "tema.8" }}>{requests.status.toUpperCase()}</Text>
-                            <Button size="9" borderRadius={25} marginLeft={"58%"} variant="unstyled" _pressed={{ bg: 'tema.6' }} onPress={() => onSubmit(requests.id)}>
-                                <Image size="7" marginLeft={"60%"} source={require('../assets/PL1N.png')} _dark={{ color: "tema.3", tintColor: "tema.3" }} _light={{ color: "tema.2", tintColor: "tema.2" }} alt="open" />
+                            <Button size="9" marginLeft={"60%"} borderRadius={25} variant="unstyled" _pressed={{ bg: 'tema.6' }} onPress={() => onSubmit(requests.id)}>
+                                <Image size="7" source={require('../assets/PL1N.png')} _dark={{ color: "tema.3", tintColor: "tema.3" }} _light={{ color: "tema.2", tintColor: "tema.2" }} alt="open" />
                             </Button>
                         </HStack>
                     </Box>
