@@ -25,12 +25,12 @@ function VieWorOrdPen({ navigation, route }){
                 <Text _dark={{color: "tema.2"}} _light={{color: "tema.3"}} fontSize="xl" marginTop="3%" bold>Area Solicitante: </Text>
                 <Text _dark={{color: "tema.2"}} _light={{color: "tema.3"}} fontSize="xl" marginTop="3%" bold >Nombre del Solicitante: </Text>
                 <Text _dark={{color: "tema.2"}} _light={{color: "tema.3"}} fontSize="xl" marginTop="3%" bold>Descripcion: </Text>
-                <TextArea marginTop="2%" alignItems={'center'} justifyContent={'center'} _dark={{color: "tema.2", borderColor:"tema.2"}} _light={{color: "tema.3", borderColor:"tema.2"}} fontSize="md"></TextArea>            
+                <TextArea marginTop="2%" alignItems={'center'} justifyContent={'center'} _dark={{color: "tema.2", borderColor:"tema.2"}} _light={{color: "tema.3", borderColor:"tema.2"}} fontSize="md" isDisabled></TextArea>            
                 <Text _dark={{color: "tema.2"}} _light={{color: "tema.3"}} marginTop="3%" fontSize="xl" bold>Evidencia: </Text>
                 <HStack space="4" alignSelf="center" marginTop="3%">
-                    <Image size="12" source={require('../assets/Image.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="Add image" />
-                    <Image size="12" source={require('../assets/Image.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="Add image" />
-                    <Image size="12" source={require('../assets/Image.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="Add image" />
+                    <Image size="12" borderRadius={15} source={require('../assets/Image.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="Add image" />
+                    <Image size="12" borderRadius={15} source={require('../assets/Image.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="Add image" />
+                    <Image size="12" borderRadius={15} source={require('../assets/Image.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="Add image" />
                 </HStack>
                 
                 <Button alignSelf={'center'} marginTop="5%" _pressed={{ bg: 'tema.6' }} width="40%" borderRadius={"20"} _dark={{ bg: "tema.2" }} _light={{ bg: "tema.3" }} onPress={() => navigation.navigate("forworord",{ personaldata_id: personaldata_id, id: id })}>
@@ -41,12 +41,12 @@ function VieWorOrdPen({ navigation, route }){
 
             <HStack height="12%" margin={0} alignItems="center" alignSelf="center" space="10">
                
-                 <TouchableOpacity onPress={() => navigation.navigate("menworord",{ personaldata_id: personaldata_id, id: id })}>
+                <TouchableOpacity onPress={() => navigation.navigate("menworord",{ personaldata_id: personaldata_id, id: id })}>
                     <Image size="10" source={require('../assets/C1B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="home" />
                 </TouchableOpacity>
 
                 <TouchableOpacity onPress={() => navigation.navigate("settings",{ personaldata_id: personaldata_id, id: id })}>
-                    <Image size="10" source={require('../assets/SE2B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="settings" />
+                    <Image size="10" source={require('../assets/P1B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="settings" />
                 </TouchableOpacity>
 
                 <TouchableOpacity onPress={() => setIsOpen1(!Exit)}>

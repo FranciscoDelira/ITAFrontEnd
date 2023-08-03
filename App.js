@@ -2,6 +2,7 @@ import React from "react";
 import { NativeBaseProvider, extendTheme, Center } from 'native-base';
 import Navegacion from "./components/Navegacion";
 import { NavigationContainer } from "@react-navigation/native";
+import VieWorOrdPen from "./components/ViewWorkOrderPending";
 
 function App() {
   
@@ -28,7 +29,8 @@ function App() {
   return (
     <NativeBaseProvider theme={theme}>
       <NavigationContainer>
-        <Navegacion/>
+        {/*<Navegacion/>*/}
+        <VieWorOrdPen/>
       </NavigationContainer>
     </NativeBaseProvider>
   );

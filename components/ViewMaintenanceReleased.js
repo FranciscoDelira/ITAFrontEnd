@@ -56,11 +56,11 @@ function VieMaiRel({navigation, route}){
                 <Text _dark={{color: "tema.2"}} _light={{color: "tema.3"}} alignSelf="flex-end" fontSize="md"><Text fontSize={'xl'} bold>Folio:</Text> {requestMaintenance?.id}</Text>
                 <Text _dark={{color: "tema.2"}} _light={{color: "tema.3"}} fontSize="md" marginTop="3%"> <Text bold fontSize={'xl'} marginTop="3%">Fecha:</Text> {requestMaintenance?.requestDate}</Text>
                 <Text _dark={{color: "tema.2"}} _light={{color: "tema.3"}} fontSize="xl" bold marginTop="3%">Descripción: </Text>
-                <TextArea _dark={{ color: "tema.2", borderColor: "tema.2" }} _light={{ color: "tema.3", borderColor: "tema.2" }} fontSize="md" marginTop="3%">{requestMaintenance?.requestDescription}</TextArea>
+                <TextArea _dark={{ color: "tema.2", borderColor: "tema.2" }} _light={{ color: "tema.3", borderColor: "tema.2" }} fontSize="md" marginTop="3%" isDisabled>{requestMaintenance?.requestDescription}</TextArea>
                 <Text _dark={{color: "tema.2"}} _light={{color: "tema.3"}} fontSize="xl" bold>Evidencia: </Text>
                 <HStack space={4} marginTop="3%" justifyContent={"center"}>
                     {requestMaintenance?.MR_Evidence1 && (
-                        <Image
+                        <Image borderRadius={15}
                         source={{
                             uri: `http://192.168.0.10/ITABackEnd/storage/app/${requestMaintenance?.MR_Evidence1}`,
                             }}
@@ -70,7 +70,7 @@ function VieMaiRel({navigation, route}){
                     )}
 
                     {requestMaintenance?.MR_Evidence2 && (
-                        <Image
+                        <Image borderRadius={15}
                         source={{
                             uri: `http://192.168.100.96/ITABackEnd/storage/app/${requestMaintenance?.MR_Evidence2}`,
                           }}
@@ -80,7 +80,7 @@ function VieMaiRel({navigation, route}){
                     )}
 
                     {requestMaintenance?.MR_Evidence3 && (
-                        <Image
+                        <Image borderRadius={15}
                         source={{
                             uri: `http://192.168.100.96/ITABackEnd/storage/app/${requestMaintenance?.MR_Evidence3}`,
                           }}
@@ -97,7 +97,7 @@ function VieMaiRel({navigation, route}){
                 <Text _dark={{color: "tema.2"}} _light={{color: "tema.3"}} fontSize="xl" bold marginTop="3%">Evidencia de Trabajo: </Text>
                 <HStack space={4} marginTop="3%" justifyContent={"center"}>
                     {requestMaintenance?.WO_Evidence1 && (
-                        <Image
+                        <Image borderRadius={15}
                         source={{
                             uri: `http://192.168.0.10/ITABackEnd/storage/app/${requestMaintenance?.WO_Evidence1}`,
                           }}
@@ -107,7 +107,7 @@ function VieMaiRel({navigation, route}){
                     )}
 
                     {requestMaintenance?.WO_Evidence2 && (
-                        <Image
+                        <Image borderRadius={15}
                         source={{
                             uri: `http://192.168.100.96/ITABackEnd/storage/app/${requestMaintenance?.WO_Evidence2}`,
                           }}
@@ -117,7 +117,7 @@ function VieMaiRel({navigation, route}){
                     )}
 
                     {requestMaintenance?.WO_Evidence3 && (
-                        <Image
+                        <Image borderRadius={15}
                         source={{
                             uri: `http://192.168.100.96/ITABackEnd/storage/app/${requestMaintenance?.WO_Evidence3}`,
                           }}
@@ -127,7 +127,7 @@ function VieMaiRel({navigation, route}){
                     )}
                 </HStack>
 
-                <Text alignSelf={'center'} color={'tema.10'} fontSize="md" marginTop="8%"><Text  _dark={{color: "tema.2"}} _light={{color: "tema.3"}} bold fontSize={'xl'}>Estatus: </Text> {requestMaintenance?.status.toUpperCase()}</Text>
+                <Text alignSelf={'center'} color={'tema.10'} fontSize="md" marginTop="8%" bold><Text  _dark={{color: "tema.2"}} _light={{color: "tema.3"}} bold fontSize={'xl'}>Estatus: </Text> {requestMaintenance?.status.toUpperCase()}</Text>
                     
             </Box>
 
