@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { VStack, Text, Image, Box, HStack, AlertDialog, Button, Input,Heading, ScrollView } from "native-base";
+import { VStack, Text, Image, Box, HStack, AlertDialog, Button, Input,Heading, ScrollView, TextArea } from "native-base";
 import DatePicker, { getFormatedDate } from "react-native-modern-datepicker";
 import { View, Modal, TouchableOpacity } from "react-native";
 import { launchImageLibrary } from "react-native-image-picker";
@@ -96,22 +96,22 @@ function VieWorOrdApr({ navigation, route }) {
                 <Input _dark={{ bg: "tema.2", color: "tema.3", placeholderTextColor: "tema.3" }} _light={{ bg: "tema.3", color: "tema.2", placeholderTextColor: "tema.2" }} borderColor="tema.1" fontSize="md" height="6%" />
 
                 <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="md" marginTop="3%" fontWeight="bold">Descripción:</Text>
-                <Input _dark={{ bg: "tema.2", color: "tema.3", placeholderTextColor: "tema.3" }} _light={{ bg: "tema.3", color: "tema.2", placeholderTextColor: "tema.2" }} borderColor="tema.1" fontSize="md" height="8%" />
+                <TextArea _dark={{ color: "tema.2", borderColor: "tema.2" }} _light={{ color: "tema.3", borderColor: "tema.2" }} fontSize="md" marginTop="3%" TextArea/>
 
                 <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="md" marginTop="3%" fontWeight="bold">Evidencia:</Text>
                 <HStack space="4" alignSelf="center" marginTop="3%">
                     <Button h="20" w="20" borderWidth={0.5} _pressed={{ bg: 'tema.6' }} _dark={{ bg: "tema.3" }} _light={{ bg: "tema.2" }} onPress={openGallery}>
-                        <Image size="10" source={require('../assets/Image.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="Add image" />
+                        <Image size="10" borderRadius={15} source={require('../assets/Image.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="Add image" />
                     </Button>
                     <Image alignSelf="center" source={{ uri: galleryPhoto }} alt="Image gallery" />
 
                     <Button h="20" w="20" borderWidth={0.5} _pressed={{ bg: 'tema.6' }} _dark={{ bg: "tema.3" }} _light={{ bg: "tema.2" }} onPress={openGallery}>
-                        <Image size="10" source={require('../assets/Image.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="Add image" />
+                        <Image size="10" borderRadius={15} source={require('../assets/Image.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="Add image" />
                     </Button>
                     <Image alignSelf="center" source={{ uri: galleryPhoto }} alt="Image gallery" />
 
                     <Button h="20" w="20" borderWidth={0.5} _pressed={{ bg: 'tema.6' }} _dark={{ bg: "tema.3" }} _light={{ bg: "tema.2" }} onPress={openGallery}>
-                        <Image size="10" source={require('../assets/Image.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="Add image" />
+                        <Image size="10" borderRadius={15} source={require('../assets/Image.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="Add image" />
                     </Button>
                     <Image alignSelf="center" source={{ uri: galleryPhoto }} alt="Image gallery" />
                 </HStack>
@@ -141,17 +141,17 @@ function VieWorOrdApr({ navigation, route }) {
                 <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="md" marginTop="3%" fontWeight="bold">Evidencia de trabajo:</Text>
                 <HStack space="4" alignSelf="center" marginTop="3%">
                     <Button h="20" w="20" borderWidth={0.5} _pressed={{ bg: 'tema.6' }} _dark={{ bg: "tema.3" }} _light={{ bg: "tema.2" }} onPress={openGallery}>
-                        <Image size="10" source={require('../assets/Image.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="Add image" />
+                        <Image size="10" borderRadius={15} source={require('../assets/Image.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="Add image" />
                     </Button>
                     <Image alignSelf="center" source={{ uri: galleryPhoto }} alt="Image gallery" />
 
                     <Button h="20" w="20" borderWidth={0.5} _pressed={{ bg: 'tema.6' }} _dark={{ bg: "tema.3" }} _light={{ bg: "tema.2" }} onPress={openGallery}>
-                        <Image size="10" source={require('../assets/Image.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="Add image" />
+                        <Image size="10" borderRadius={15} source={require('../assets/Image.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="Add image" />
                     </Button>
                     <Image alignSelf="center" source={{ uri: galleryPhoto }} alt="Image gallery" />
 
                     <Button h="20" w="20" borderWidth={0.5} _pressed={{ bg: 'tema.6' }} _dark={{ bg: "tema.3" }} _light={{ bg: "tema.2" }} onPress={openGallery}>
-                        <Image size="10" source={require('../assets/Image.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="Add image" />
+                        <Image size="10" borderRadius={15} source={require('../assets/Image.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="Add image" />
                     </Button>
                     <Image alignSelf="center" source={{ uri: galleryPhoto }} alt="Image gallery" />
                 </HStack>
@@ -168,7 +168,7 @@ function VieWorOrdApr({ navigation, route }) {
                 </TouchableOpacity>
 
                 <TouchableOpacity onPress={() => navigation.navigate("settings",{ personaldata_id: personaldata_id, id: id })}>
-                    <Image size="10" source={require('../assets/SE2B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="settings" />
+                    <Image size="10" source={require('../assets/P1B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="settings" />
                 </TouchableOpacity>
 
                 <TouchableOpacity onPress={() => setIsOpen1(!Exit)}>
