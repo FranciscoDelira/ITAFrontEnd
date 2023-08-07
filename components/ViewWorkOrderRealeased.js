@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from "react";
-import { VStack, Text, Image, Box, HStack, AlertDialog, Button, Heading, ScrollView, TextArea } from "native-base";
+import { VStack, Text, Image, Box, HStack, AlertDialog, Button, Heading, ScrollView } from "native-base";
 import { TouchableOpacity } from "react-native";
 
-function VieWorOrdApr({ navigation, route }) {
+function VieWorOrdRel({ navigation, route }) {
     /* recibe los parametros del id del user y del personal data */
     const { personaldata_id } = route.params;
-    console.log('View Work order Aproved Released')
+    console.log('View Work order Released new')
     console.log('PersonalData ID:', personaldata_id);
     const { id } = route.params;
     console.log('User ID:', id);
 
     const { requestId } = route.params;
+    console.log('request id:', requestId);
     const [requestMaintenance, setRequestMaintenance] = useState([""]);
 
     //Estados para abrir y cerrar alerts
@@ -47,7 +48,7 @@ function VieWorOrdApr({ navigation, route }) {
                         <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="md" marginTop="3%"><Text fontWeight="bold">Fecha de solicitud: </Text>{request.requestDate}</Text>
                         <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="md" marginTop="3%"><Text fontWeight="bold">Área solicitante: </Text>{request.area}</Text>
                         <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="md" marginTop="3%"><Text fontWeight="bold">Nombre solicitante: </Text>{request.name} {request.lastname}</Text>
-                        <TextArea _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="md" marginTop="3%" bold isDisabled><Text bold>Descripción:</Text>{request.requestDescription}</TextArea>
+                        <TextArea _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="md" marginTop="3%" isDisabled bold><Text bold>Descripción:</Text>{request.requestDescription}</TextArea>
                         <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="md" marginTop="3%" fontWeight="bold">Evidencia:</Text>
                         <HStack space="4" alignSelf="center" marginTop="3%">
                             {request.Evidence1MR && (
@@ -114,7 +115,7 @@ function VieWorOrdApr({ navigation, route }) {
                                 />
                             )}
                         </HStack>
-                        <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="md" marginTop="3%" textAlign="center" fontWeight="bold">Estatus: <Text color="orange.400">APROBADA</Text></Text>
+                        <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="md" marginTop="3%" textAlign="center" bold>Estatus: <Text bold color="tema.10">LIBERADA</Text></Text>
                     </ScrollView>
                 </Box>
             ))}
@@ -156,4 +157,4 @@ function VieWorOrdApr({ navigation, route }) {
     )
 }
 
-export default VieWorOrdApr;
+export default VieWorOrdRel;
