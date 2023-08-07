@@ -52,7 +52,7 @@ function VieWorOrdPen({ navigation, route }) {
                     <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} marginTop="3%" fontSize="xl" bold>Evidencia: </Text>
                     <HStack space="4" alignSelf="center" marginTop="3%">
                         {request.Evidence1MR && (
-                            <Image
+                            <Image borderRadius={15}
                                 source={{
                                     uri: `http://192.168./ITABackEnd/storage/app/${request.Evidence1MR}`,
                                 }}
@@ -62,7 +62,7 @@ function VieWorOrdPen({ navigation, route }) {
                         )}
 
                         {request.Evidence2MR && (
-                            <Image
+                            <Image borderRadius={15}
                                 source={{
                                     uri: `http://192.168./ITABackEnd/storage/app/${request.Evidence2MR}`,
                                 }}
@@ -72,7 +72,7 @@ function VieWorOrdPen({ navigation, route }) {
                         )}
 
                         {request.Evidence3MR && (
-                            <Image
+                            <Image borderRadius={15}
                                 source={{
                                     uri: `http://192.168./ITABackEnd/storage/app/${request.Evidence3MR}`,
                                 }}
