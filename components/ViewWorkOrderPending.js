@@ -48,7 +48,7 @@ function VieWorOrdPen({ navigation, route }) {
                     <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="xl" marginTop="3%" textTransform={"capitalize"}><Text fontSize={'xl'} bold>Area Solicitante: </Text> {request.area} </Text>
                     <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="xl" marginTop="3%" textTransform={"capitalize"}><Text fontSize={'xl'} bold>Nombre del Solicitante: </Text>{request.name} {request.lastname} </Text>
                     <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="xl" marginTop="3%" textTransform={"capitalize"} bold>Descripcion: </Text>
-                    <TextArea marginTop="2%" alignItems={'center'} justifyContent={'center'} _dark={{ color: "tema.2", borderColor: "tema.2" }} _light={{ color: "tema.3", borderColor: "tema.2" }} fontSize="md">{request.requestDescription}</TextArea>
+                    <TextArea marginTop="2%" alignItems={'center'} justifyContent={'center'} _dark={{ color: "tema.2", borderColor: "tema.2" }} _light={{ color: "tema.3", borderColor: "tema.2" }} fontSize="md" isDisabled>{request.requestDescription}</TextArea>
                     <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} marginTop="3%" fontSize="xl" bold>Evidencia: </Text>
                     <HStack space="4" alignSelf="center" marginTop="3%">
                         {request.Evidence1MR && (
@@ -95,7 +95,7 @@ function VieWorOrdPen({ navigation, route }) {
                 </TouchableOpacity>
 
                 <TouchableOpacity onPress={() => navigation.navigate("settings", { personaldata_id: personaldata_id, id: id })}>
-                    <Image size="10" source={require('../assets/SE2B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="settings" />
+                    <Image size="10" source={require('../assets/P1B.png')} _dark={{ color: "tema.2", tintColor: "tema.2" }} _light={{ color: "tema.3", tintColor: "tema.3" }} alt="settings" />
                 </TouchableOpacity>
 
                 <TouchableOpacity onPress={() => setIsOpen1(!Exit)}>

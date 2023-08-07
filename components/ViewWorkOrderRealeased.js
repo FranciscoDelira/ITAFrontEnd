@@ -48,11 +48,11 @@ function VieWorOrdRel({ navigation, route }) {
                         <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="md" marginTop="3%"><Text fontWeight="bold">Fecha de solicitud: </Text>{request.requestDate}</Text>
                         <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="md" marginTop="3%"><Text fontWeight="bold">Área solicitante: </Text>{request.area}</Text>
                         <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="md" marginTop="3%"><Text fontWeight="bold">Nombre solicitante: </Text>{request.name} {request.lastname}</Text>
-                        <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="md" marginTop="3%"><Text fontWeight="bold">Descripción:</Text>{request.requestDescription}</Text>
+                        <TextArea _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="md" marginTop="3%" isDisabled bold><Text bold>Descripción:</Text>{request.requestDescription}</TextArea>
                         <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="md" marginTop="3%" fontWeight="bold">Evidencia:</Text>
                         <HStack space="4" alignSelf="center" marginTop="3%">
                             {request.Evidence1MR && (
-                                <Image
+                                <Image borderRadius={15}
                                     source={{
                                         uri: `http://192.168./ITABackEnd/storage/app/${request.Evidence1MR}`,
                                     }}
@@ -62,7 +62,7 @@ function VieWorOrdRel({ navigation, route }) {
                             )}
 
                             {request.Evidence2MR && (
-                                <Image
+                                <Image borderRadius={15}
                                     source={{
                                         uri: `http://192.168./ITABackEnd/storage/app/${request.Evidence2MR}`,
                                     }}
@@ -72,7 +72,7 @@ function VieWorOrdRel({ navigation, route }) {
                             )}
 
                             {request.Evidence3MR && (
-                                <Image
+                                <Image borderRadius={15}
                                     source={{
                                         uri: `http://192.168./ITABackEnd/storage/app/${request.Evidence3MR}`,
                                     }}
@@ -86,7 +86,7 @@ function VieWorOrdRel({ navigation, route }) {
                         <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="md" marginTop="3%" fontWeight="bold">Evidencia de trabajo:</Text>
                         <HStack space="4" alignSelf="center" marginTop="3%">
                             {request.Evidence1WO && (
-                                <Image
+                                <Image borderRadius={15}
                                     source={{
                                         uri: `http://192.168./ITABackEnd/storage/app/${request.Evidence1WO}`,
                                     }}
@@ -96,7 +96,7 @@ function VieWorOrdRel({ navigation, route }) {
                             )}
 
                             {request.Evidence2WO && (
-                                <Image
+                                <Image borderRadius={15}
                                     source={{
                                         uri: `http://192.168./ITABackEnd/storage/app/${request.Evidence2WO}`,
                                     }}
@@ -106,7 +106,7 @@ function VieWorOrdRel({ navigation, route }) {
                             )}
 
                             {request.Evidence3WO && (
-                                <Image
+                                <Image borderRadius={15}
                                     source={{
                                         uri: `http://192.168./ITABackEnd/storage/app/${request.Evidence3WO}`,
                                     }}
@@ -115,7 +115,7 @@ function VieWorOrdRel({ navigation, route }) {
                                 />
                             )}
                         </HStack>
-                        <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="md" marginTop="3%" textAlign="center" fontWeight="bold">Estatus: <Text color="tema.10">LIBERADA</Text></Text>
+                        <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="md" marginTop="3%" textAlign="center" bold>Estatus: <Text bold color="tema.10">LIBERADA</Text></Text>
                     </ScrollView>
                 </Box>
             ))}

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { VStack, Text, Image, Box, HStack, AlertDialog, Button, Heading, ScrollView } from "native-base";
+import { VStack, Text, Image, Box, HStack, AlertDialog, Button, Heading, ScrollView, TextArea } from "native-base";
 import { TouchableOpacity } from "react-native";
 
 function VieWorOrdApr({ navigation, route }) {
@@ -47,11 +47,11 @@ function VieWorOrdApr({ navigation, route }) {
                         <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="md" marginTop="3%"><Text fontWeight="bold">Fecha de solicitud: </Text>{request.requestDate}</Text>
                         <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="md" marginTop="3%"><Text fontWeight="bold">Área solicitante: </Text>{request.area}</Text>
                         <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="md" marginTop="3%"><Text fontWeight="bold">Nombre solicitante: </Text>{request.name} {request.lastname}</Text>
-                        <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="md" marginTop="3%"><Text fontWeight="bold">Descripción:</Text>{request.requestDescription}</Text>
+                        <TextArea _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="md" marginTop="3%" bold isDisabled><Text bold>Descripción:</Text>{request.requestDescription}</TextArea>
                         <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="md" marginTop="3%" fontWeight="bold">Evidencia:</Text>
                         <HStack space="4" alignSelf="center" marginTop="3%">
                             {request.Evidence1MR && (
-                                <Image
+                                <Image borderRadius={15}
                                     source={{
                                         uri: `http://192.168./ITABackEnd/storage/app/${request.Evidence1MR}`,
                                     }}
@@ -61,7 +61,7 @@ function VieWorOrdApr({ navigation, route }) {
                             )}
 
                             {request.Evidence2MR && (
-                                <Image
+                                <Image borderRadius={15}
                                     source={{
                                         uri: `http://192.168./ITABackEnd/storage/app/${request.Evidence2MR}`,
                                     }}
@@ -71,7 +71,7 @@ function VieWorOrdApr({ navigation, route }) {
                             )}
 
                             {request.Evidence3MR && (
-                                <Image
+                                <Image borderRadius={15}
                                     source={{
                                         uri: `http://192.168./ITABackEnd/storage/app/${request.Evidence3MR}`,
                                     }}
@@ -85,7 +85,7 @@ function VieWorOrdApr({ navigation, route }) {
                         <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="md" marginTop="3%" fontWeight="bold">Evidencia de trabajo:</Text>
                         <HStack space="4" alignSelf="center" marginTop="3%">
                             {request.Evidence1WO && (
-                                <Image
+                                <Image borderRadius={15}
                                     source={{
                                         uri: `http://192.168./ITABackEnd/storage/app/${request.Evidence1WO}`,
                                     }}
@@ -95,7 +95,7 @@ function VieWorOrdApr({ navigation, route }) {
                             )}
 
                             {request.Evidence2WO && (
-                                <Image
+                                <Image borderRadius={15}
                                     source={{
                                         uri: `http://192.168./ITABackEnd/storage/app/${request.Evidence2WO}`,
                                     }}
@@ -105,7 +105,7 @@ function VieWorOrdApr({ navigation, route }) {
                             )}
 
                             {request.Evidence3WO && (
-                                <Image
+                                <Image borderRadius={15}
                                     source={{
                                         uri: `http://192.168./ITABackEnd/storage/app/${request.Evidence3WO}`,
                                     }}
