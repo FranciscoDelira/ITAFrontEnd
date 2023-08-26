@@ -13,6 +13,8 @@ function VieMaiRel({navigation, route}){
     const { requestId } = route.params;
     //console.log('Request ID:', requestId);
     const { requestId: maintenancerequest_id } = route.params;
+    const [personalData, setPersonalData] = useState(null);
+    
     
     const [Exit, setIsOpen1] = React.useState(false);
     const CloseE = () => setIsOpen1(false);
@@ -25,6 +27,21 @@ function VieMaiRel({navigation, route}){
     
     const[requestMaintenance, setRequestMaintenance] = useState(null);
     const[workOrder, setWorkOrder] = useState(null);
+
+    useEffect(() => {
+        // Función para obtener los datos del personaldata_id
+        const getPersonalData = async () => {
+          try {
+            const response = await fetch(`http://192.168./ITABackEnd/public/api/showCombinedData/${personaldata_id}`);
+            const data = await response.json();
+            setPersonalData(data); // Actualiza el estado con los datos obtenidos
+          } catch (error) {
+            console.log(error);
+          }
+        };
+    
+        getPersonalData(); // Llama a la función para obtener los datos
+      }, [personaldata_id]);
 
     useEffect(() => {
         //Función para obtener los datos de la solicitud
@@ -62,7 +79,7 @@ function VieMaiRel({navigation, route}){
                     {requestMaintenance?.MR_Evidence1 && (
                         <Image borderRadius={15}
                         source={{
-                            uri: `http://192.168./ITABackEnd/storage/app/${requestMaintenance?.MR_Evidence1}`,
+                            uri: `http://192.168.0.139/ITABackEnd/storage/app/${requestMaintenance?.MR_Evidence1}`,
                             }}
                             alt="image1"
                             size="md"
@@ -72,7 +89,7 @@ function VieMaiRel({navigation, route}){
                     {requestMaintenance?.MR_Evidence2 && (
                         <Image borderRadius={15}
                         source={{
-                            uri: `http://192.168./ITABackEnd/storage/app/${requestMaintenance?.MR_Evidence2}`,
+                            uri: `http://192.168.0.139/ITABackEnd/storage/app/${requestMaintenance?.MR_Evidence2}`,
                           }}
                             alt="image2"
                             size="md"
@@ -82,7 +99,7 @@ function VieMaiRel({navigation, route}){
                     {requestMaintenance?.MR_Evidence3 && (
                         <Image borderRadius={15}
                         source={{
-                            uri: `http://192.168./ITABackEnd/storage/app/${requestMaintenance?.MR_Evidence3}`,
+                            uri: `http://192.168.0.139/ITABackEnd/storage/app/${requestMaintenance?.MR_Evidence3}`,
                           }}
                             alt="image3"
                             size="md"
@@ -91,7 +108,7 @@ function VieMaiRel({navigation, route}){
                 </HStack>
 
                 {/* MOSTRAR EL NOMBRE DEL EMPLEADO EN LUGAR DEL ID */}
-                <Text _dark={{color: "tema.2"}} _light={{color: "tema.3"}} fontSize="md"><Text bold fontSize={'xl'}>Asignado A: </Text> {requestMaintenance?.personaldata_id}</Text>
+                <Text _dark={{color: "tema.2"}} _light={{color: "tema.3"}} fontSize="md"><Text bold fontSize={'xl'}>Asignado A: </Text> {personalData?.name} {personalData?.lastname} </Text>
                 <Text _dark={{color: "tema.2"}} _light={{color: "tema.3"}} fontSize="md" marginTop="3%"><Text bold fontSize={'xl'}>Fecha de Realización: </Text> {requestMaintenance?.maintenanceDate}</Text>
                 <Text _dark={{color: "tema.2"}} _light={{color: "tema.3"}} fontSize="md" marginTop="3%"><Text bold fontSize={'xl'}>Trabajo Realizado: </Text>  {requestMaintenance?.jobDescription}</Text>
                 <Text _dark={{color: "tema.2"}} _light={{color: "tema.3"}} fontSize="xl" bold marginTop="3%">Evidencia de Trabajo: </Text>
@@ -99,7 +116,7 @@ function VieMaiRel({navigation, route}){
                     {requestMaintenance?.WO_Evidence1 && (
                         <Image
                         source={{
-                            uri: `http://192.168./ITABackEnd/storage/app/${requestMaintenance?.WO_Evidence1}`,
+                            uri: `http://192.168.0.139/ITABackEnd/storage/app/${requestMaintenance?.WO_Evidence1}`,
                           }}
                             alt="image1"
                             size="md"
@@ -109,7 +126,7 @@ function VieMaiRel({navigation, route}){
                     {requestMaintenance?.WO_Evidence2 && (
                         <Image
                         source={{
-                            uri: `http://192.168./ITABackEnd/storage/app/${requestMaintenance?.WO_Evidence2}`,
+                            uri: `http://192.168.0.139/ITABackEnd/storage/app/${requestMaintenance?.WO_Evidence2}`,
                           }}
                             alt="image2"
                             size="md"
@@ -119,7 +136,7 @@ function VieMaiRel({navigation, route}){
                     {requestMaintenance?.WO_Evidence3 && (
                         <Image
                         source={{
-                            uri: `http://192.168./ITABackEnd/storage/app/${requestMaintenance?.WO_Evidence3}`,
+                            uri: `http://192.168.0.139/ITABackEnd/storage/app/${requestMaintenance?.WO_Evidence3}`,
                           }}
                             alt="image3"
                             size="md"

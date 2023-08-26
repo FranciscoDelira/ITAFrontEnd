@@ -149,7 +149,7 @@ function ForMaiReq({ navigation }) {
 
         try {
             const response = await axios.post(
-                'http://192.168./ITABackEnd/public/api/maintenance_store',
+                'http://192.168.100.93/ITABackEnd/public/api/maintenance_store',
                 formData,
                 {
                     headers: {
@@ -196,8 +196,7 @@ function ForMaiReq({ navigation }) {
             <Box height="70%" w="90%" alignSelf="center">
 
                 <View>
-                    <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="md" marginTop="3%">Fecha de mantenimiento:
-                        <TouchableOpacity onPress={handleOnPress}>
+                    <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="md" marginTop="3%">Fecha de Solicitud:                                                         <TouchableOpacity onPress={handleOnPress}>
                             <Text _dark={{ color: "tema.2" }} _light={{ color: "tema.3" }} fontSize="md"> {text}</Text>
                         </TouchableOpacity>
                     </Text>
