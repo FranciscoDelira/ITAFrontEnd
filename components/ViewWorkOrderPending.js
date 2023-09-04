@@ -82,7 +82,7 @@ function VieWorOrdPen({ navigation, route }) {
                         )}
                     </HStack>
 
-                    <Button alignSelf={'center'} marginTop="5%" _pressed={{ bg: 'tema.6' }} width="40%" borderRadius={"20"} _dark={{ bg: "tema.2" }} _light={{ bg: "tema.3" }} onPress={() => navigation.navigate("forworord", { personaldata_id: personaldata_id, id: id })}>
+                    <Button alignSelf={'center'} marginTop="5%" _pressed={{ bg: 'tema.6' }} width="40%" borderRadius={"20"} _dark={{ bg: "tema.2" }} _light={{ bg: "tema.3" }} onPress={() => navigation.navigate("forworord", { personaldata_id: personaldata_id, id: id, requestId: requestId })}>
                         <Text _dark={{ color: "tema.3" }} _light={{ color: "tema.2" }} >Terminar Orden</Text>
                     </Button>
 

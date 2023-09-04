@@ -79,7 +79,7 @@ function VieMaiRel({navigation, route}){
                     {requestMaintenance?.MR_Evidence1 && (
                         <Image borderRadius={15}
                         source={{
-                            uri: `http://192.168.0.139/ITABackEnd/storage/app/${requestMaintenance?.MR_Evidence1}`,
+                            uri: `http://192.168./ITABackEnd/storage/app/${requestMaintenance?.MR_Evidence1}`,
                             }}
                             alt="image1"
                             size="md"
@@ -89,7 +89,7 @@ function VieMaiRel({navigation, route}){
                     {requestMaintenance?.MR_Evidence2 && (
                         <Image borderRadius={15}
                         source={{
-                            uri: `http://192.168.0.139/ITABackEnd/storage/app/${requestMaintenance?.MR_Evidence2}`,
+                            uri: `http://192.168./ITABackEnd/storage/app/${requestMaintenance?.MR_Evidence2}`,
                           }}
                             alt="image2"
                             size="md"
@@ -99,7 +99,7 @@ function VieMaiRel({navigation, route}){
                     {requestMaintenance?.MR_Evidence3 && (
                         <Image borderRadius={15}
                         source={{
-                            uri: `http://192.168.0.139/ITABackEnd/storage/app/${requestMaintenance?.MR_Evidence3}`,
+                            uri: `http://192.168./ITABackEnd/storage/app/${requestMaintenance?.MR_Evidence3}`,
                           }}
                             alt="image3"
                             size="md"
@@ -116,7 +116,7 @@ function VieMaiRel({navigation, route}){
                     {requestMaintenance?.WO_Evidence1 && (
                         <Image
                         source={{
-                            uri: `http://192.168.0.139/ITABackEnd/storage/app/${requestMaintenance?.WO_Evidence1}`,
+                            uri: `http://192.168./ITABackEnd/storage/app/${requestMaintenance?.WO_Evidence1}`,
                           }}
                             alt="image1"
                             size="md"
@@ -126,7 +126,7 @@ function VieMaiRel({navigation, route}){
                     {requestMaintenance?.WO_Evidence2 && (
                         <Image
                         source={{
-                            uri: `http://192.168.0.139/ITABackEnd/storage/app/${requestMaintenance?.WO_Evidence2}`,
+                            uri: `http://192.168./ITABackEnd/storage/app/${requestMaintenance?.WO_Evidence2}`,
                           }}
                             alt="image2"
                             size="md"
@@ -136,7 +136,7 @@ function VieMaiRel({navigation, route}){
                     {requestMaintenance?.WO_Evidence3 && (
                         <Image
                         source={{
-                            uri: `http://192.168.0.139/ITABackEnd/storage/app/${requestMaintenance?.WO_Evidence3}`,
+                            uri: `http://192.168./ITABackEnd/storage/app/${requestMaintenance?.WO_Evidence3}`,
                           }}
                             alt="image3"
                             size="md"
